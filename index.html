@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- TOVISEN AUSTRALIA COMPLETE GITHUB PRESENTATION - INTERNAL HOME PAGE -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d0f">
-<title>TOVISEN Australia - Internal Product + Market Strategy</title>
+<title>TOVISEN Australia - Complete Presentation with V1000 Comparison</title>
 <meta name="description" content="Interactive Australian product range, machine selector and launch strategy concept for TOVISEN.">
 <style>
 :root{
@@ -484,6 +483,38 @@ footer{background:#090b0d;color:#979ea4;padding:26px 4vw;font-size:10px;line-hei
   .risk-panel-hero h2{font-size:39px}
 }
 
+
+/* Self-contained V1000 competitor chart - no external image file required */
+.v1000-chart{overflow:hidden;border-radius:10px;background:#111417;color:#fff}
+.v1000-chart-head{padding:22px 22px 17px;background:linear-gradient(135deg,#111417,#262b30)}
+.v1000-chart-head small{display:block;color:#ff9da1;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.13em}
+.v1000-chart-head h3{font-size:28px;margin:8px 0 7px}
+.v1000-chart-head p{margin:0;color:#aeb5ba;font-size:11px;line-height:1.55}
+.v1000-chart-legend{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.chart-tag{font-size:8px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;padding:6px 8px;border-radius:999px}
+.chart-tag.tovisen{background:#d71920;color:#fff}
+.chart-tag.roc{background:#dff1e7;color:#155f39}
+.chart-tag.claim{background:#fff0cc;color:#805600}
+.chart-scroll{overflow-x:auto;background:#fff}
+.v1000-matrix{width:100%;min-width:760px;border-collapse:collapse;color:#14181b}
+.v1000-matrix th,.v1000-matrix td{padding:13px 12px;border-bottom:1px solid #e1e4e6;text-align:left;vertical-align:top}
+.v1000-matrix thead th{position:sticky;top:0;background:#f1f2f3;color:#555e65;font-size:8px;text-transform:uppercase;letter-spacing:.08em;z-index:1}
+.v1000-matrix tbody th{width:170px;font-size:12px}
+.v1000-matrix tbody tr:first-child{background:#fff1f2}
+.v1000-matrix tbody tr:first-child th{color:#b70e15}
+.v1000-matrix td{font-size:10px;line-height:1.45;color:#4d565d}
+.metric-main{display:block;font-size:13px;font-weight:900;color:#171a1e;margin-bottom:3px}
+.metric-sub{display:block;font-size:8px;color:#7b848a;text-transform:uppercase;letter-spacing:.05em}
+.method-badge{display:inline-block;margin-top:5px;padding:4px 6px;border-radius:999px;font-size:7px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.method-badge.verify{background:#fff0cc;color:#805600}
+.method-badge.roc{background:#dff1e7;color:#155f39}
+.method-badge.mixed{background:#e3edf7;color:#225f91}
+.chart-bottom{padding:16px 19px;background:#f7f7f6;color:#555e65;font-size:10px;line-height:1.55;border-top:1px solid #e1e4e6}
+.chart-bottom b{color:#171a1e}
+@media(max-width:690px){
+  .v1000-chart-head h3{font-size:23px}
+}
+
 </style>
 </head>
 <body>
@@ -699,7 +730,83 @@ footer{background:#090b0d;color:#979ea4;padding:26px 4vw;font-size:10px;line-hei
     </div>
     <div class="evidence-grid">
       <div class="comparison-card">
-        <img src="assets/v1000-comparison.jpg" alt="TOVISEN V1000 comparison chart">
+        <div class="v1000-chart" role="region" aria-label="V1000 competitor comparison chart" tabindex="0">
+          <div class="v1000-chart-head">
+            <small>Australian evidence review</small>
+            <h3>V1000 competitor comparison</h3>
+            <p>The important issue is not simply which number is largest. The capacity claims use different terminology and test methods, so they must be verified before being compared directly.</p>
+            <div class="v1000-chart-legend">
+              <span class="chart-tag tovisen">TOVISEN</span>
+              <span class="chart-tag roc">Published ROC</span>
+              <span class="chart-tag claim">Claim requiring verification</span>
+            </div>
+          </div>
+          <div class="chart-scroll">
+            <table class="v1000-matrix">
+              <thead>
+                <tr>
+                  <th>Machine</th>
+                  <th>Power / engine</th>
+                  <th>Capacity statement</th>
+                  <th>Width</th>
+                  <th>Operating weight</th>
+                  <th>Australian comparison issue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>TOVISEN V1000</th>
+                  <td><span class="metric-main">Kubota D1105</span><span class="metric-sub">18.5 kW published option</span></td>
+                  <td><span class="metric-main">650 kg / 1,433 lb</span><span class="metric-sub">Maximum lifting force</span><span class="method-badge verify">ROC not verified</span></td>
+                  <td><span class="metric-main">960 mm</span><span class="metric-sub">Published width</span></td>
+                  <td><span class="metric-main">1,658 kg</span><span class="metric-sub">Official-facing figure</span></td>
+                  <td>Strong lift-to-footprint story, but the 650 kg figure must not be presented as ROC until tested under a recognised method.</td>
+                </tr>
+                <tr>
+                  <th>Derette V1000</th>
+                  <td><span class="metric-main">25 hp</span><span class="metric-sub">Kubota D902 or Perkins</span></td>
+                  <td><span class="metric-main">650 kg / 1,433 lb</span><span class="metric-sub">Listed as rated capacity</span><span class="method-badge verify">Method to confirm</span></td>
+                  <td><span class="metric-main">900 mm</span><span class="metric-sub">Narrower body</span></td>
+                  <td><span class="metric-main">1,538 kg</span></td>
+                  <td>Narrower and more established online, but the capacity terminology also requires scrutiny.</td>
+                </tr>
+                <tr>
+                  <th>Derette XC1100</th>
+                  <td><span class="metric-main">25 hp</span><span class="metric-sub">Kubota D1105</span></td>
+                  <td><span class="metric-main">1,100 lb ROC</span><span class="metric-sub">Retail positioning</span><span class="method-badge mixed">Other max-lift claim exists</span></td>
+                  <td><span class="metric-main">950 mm</span></td>
+                  <td><span class="metric-main">1,690 kg</span></td>
+                  <td>Strong component story and dealer momentum; public ROC and maximum-lift claims should remain separated.</td>
+                </tr>
+                <tr>
+                  <th>VMENG SAM-1000Z MAX</th>
+                  <td><span class="metric-main">25 hp</span><span class="metric-sub">Kubota D1105</span></td>
+                  <td><span class="metric-main">1,100 lb ROC</span><span class="method-badge roc">Published ROC</span></td>
+                  <td><span class="metric-main">1,041 mm</span><span class="metric-sub">Approximately 41 in</span></td>
+                  <td><span class="metric-main">1,512 kg</span><span class="metric-sub">Approximately 3,333 lb</span></td>
+                  <td>More detailed premium hydraulic positioning and high-flow story, but wider than TOVISEN.</td>
+                </tr>
+                <tr>
+                  <th>Bobcat MT120</th>
+                  <td><span class="metric-main">18.3 kW</span><span class="metric-sub">Diesel</span></td>
+                  <td><span class="metric-main">1,200 lb ROC</span><span class="method-badge roc">Recognised methodology</span></td>
+                  <td><span class="metric-main">About 910 mm</span></td>
+                  <td><span class="metric-main">1,687 kg</span></td>
+                  <td>Dealer support, attachment ecosystem and recognised capacity testing are the benchmark.</td>
+                </tr>
+                <tr>
+                  <th>Kubota SCL1000</th>
+                  <td><span class="metric-main">24.8 hp</span><span class="metric-sub">Kubota diesel</span></td>
+                  <td><span class="metric-main">1,000 lb ROC</span><span class="method-badge roc">Published ROC</span></td>
+                  <td><span class="metric-main">About 910 mm</span></td>
+                  <td><span class="metric-main">About 1,377 kg</span></td>
+                  <td>Brand trust, dealer support and resale are strong; TOVISEN's opportunity is industrial value if its claims are proven.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="chart-bottom"><b>Critical interpretation:</b> ROC, rated load, tipping load and maximum lifting force are not interchangeable. Australia needs one test method, a defined load centre, stated attachment and counterweight configuration, and a signed master specification.</div>
+        </div>
       </div>
       <div class="note-stack">
         <article class="note-card">
