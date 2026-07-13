@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<!-- FULL TOVISEN AUSTRALIA CUSTOMER EXPERIENCE - upload this file as index.html -->
+<!-- TOVISEN AUSTRALIA COMPLETE GITHUB PRESENTATION - INTERNAL HOME PAGE -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d0f">
-<title>TOVISEN Australia - Full Customer Experience</title>
-<meta name="description" content="Explore TOVISEN compact loaders for acreage, landscaping, fencing, facilities, property maintenance and specialist Australian work.">
+<title>TOVISEN Australia - Internal Product + Market Strategy</title>
+<meta name="description" content="Interactive Australian product range, machine selector and launch strategy concept for TOVISEN.">
 <style>
 :root{
   --red:#d71920;
-  --red-dark:#9e0c12;
-  --ink:#0b0e10;
-  --char:#15191d;
-  --char2:#23282d;
-  --paper:#f3f1ed;
+  --red-dark:#9d0c12;
+  --ink:#0d1013;
+  --char:#161a1e;
+  --char2:#22272c;
+  --paper:#f3f2ef;
   --white:#fff;
+  --steel:#8f969e;
   --line:#d9dde0;
-  --muted:#626b72;
-  --green:#23875a;
-  --amber:#d89217;
+  --muted:#667078;
+  --green:#2a9d63;
+  --amber:#e6a125;
+  --blue:#327fbd;
   --shadow:0 24px 70px rgba(0,0,0,.18);
   --radius:18px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-body.no-scroll{overflow:hidden}
-button,input,select,textarea{font:inherit}
+button,input,select{font:inherit}
 button{cursor:pointer}
-img{display:block;max-width:100%}
+img{max-width:100%;display:block}
 a{color:inherit}
+.no-scroll{overflow:hidden}
 .container{width:min(1380px,92vw);margin:auto}
-.site-header{
-  position:fixed;z-index:100;left:0;right:0;top:0;height:74px;
+.topbar{
+  position:fixed;z-index:100;left:0;right:0;top:0;height:72px;
   display:flex;align-items:center;justify-content:space-between;padding:0 4vw;
-  background:rgba(8,10,12,.94);backdrop-filter:blur(14px);color:#fff;
+  color:#fff;background:rgba(8,10,12,.94);backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(255,255,255,.09)
 }
 .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em}
@@ -46,420 +48,495 @@ a{color:inherit}
 .brand-mark:before{left:0;transform:skewX(22deg)}
 .brand-mark:after{right:0;transform:skewX(-22deg)}
 .brand span{color:var(--red)}
-.nav{display:flex;align-items:center;gap:23px}
-.nav a{text-decoration:none;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#d4d8db}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#d6d9dc}
 .nav a:hover{color:#fff}
-.header-cta{
-  border:0;border-radius:4px;background:var(--red);color:#fff;padding:12px 15px;
-  font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em
+.meeting-btn{
+  border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:11px 14px;
+  font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;border-radius:4px
 }
 .hero{
-  min-height:100vh;padding:122px 4vw 70px;display:grid;grid-template-columns:1.03fr .97fr;gap:4vw;align-items:center;
-  color:#fff;position:relative;overflow:hidden;
+  min-height:100vh;color:#fff;padding:122px 4vw 72px;position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1.02fr .98fr;gap:4vw;align-items:center;
   background:
-    radial-gradient(circle at 78% 19%,rgba(215,25,32,.26),transparent 30%),
-    linear-gradient(135deg,#080a0c,#181c20 58%,#090b0d)
+    radial-gradient(circle at 80% 18%,rgba(215,25,32,.24),transparent 30%),
+    linear-gradient(135deg,#090b0d 0%,#171b1f 56%,#0a0c0e 100%)
 }
 .hero:before{
   content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,.17) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.17) 1px,transparent 1px);
-  background-size:68px 68px;mask-image:linear-gradient(to bottom,black,transparent 86%)
+  background-image:linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+  background-size:72px 72px;mask-image:linear-gradient(to bottom,black,transparent)
 }
-.hero-copy,.hero-visual{position:relative;z-index:2}
-.eyebrow{font-size:11px;font-weight:900;letter-spacing:.19em;text-transform:uppercase;color:#ff4c52}
-h1{font-size:clamp(55px,7.3vw,112px);line-height:.9;letter-spacing:-.06em;margin:18px 0 26px}
-h1 span{display:block;color:var(--red)}
-.hero-copy p{max-width:730px;color:#d4d8db;font-size:clamp(18px,1.7vw,25px);line-height:1.55}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin:31px 0}
+.hero-copy,.hero-machine{position:relative;z-index:2}
+.eyebrow{color:#ff343b;font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1{font-size:clamp(54px,7vw,106px);line-height:.91;letter-spacing:-.055em;margin:18px 0 24px}
+h1 span{color:var(--red);display:block}
+.hero p{font-size:clamp(18px,1.7vw,25px);line-height:1.55;color:#d7dade;max-width:720px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin:32px 0}
 .btn{
-  border:0;border-radius:5px;padding:16px 22px;font-size:10px;font-weight:900;
+  border:0;border-radius:5px;padding:16px 22px;font-size:11px;font-weight:900;
   text-transform:uppercase;letter-spacing:.11em
 }
-.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 35px rgba(215,25,32,.34)}
-.btn-light{background:#fff;color:#111}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 35px rgba(215,25,32,.35)}
 .btn-dark{background:#171a1e;color:#fff}
-.btn-outline{background:transparent;color:#fff;border:1px solid #596068}
-.hero-note{margin-top:25px;color:#99a1a8;font-size:11px;line-height:1.55;max-width:680px}
+.btn-light{background:#fff;color:#111}
+.btn-outline{background:transparent;color:#fff;border:1px solid #565c63}
+.hero-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}
+.hero-point{border-top:2px solid var(--red);padding-top:12px;color:#aeb4ba;font-size:12px;line-height:1.45}
 .hero-card{
-  background:linear-gradient(160deg,#282d32,#111417);border:1px solid #444b52;padding:17px;border-radius:var(--radius);
-  box-shadow:var(--shadow);transform:rotate(-1deg)
+  background:linear-gradient(160deg,#262b31,#111417);border:1px solid #444a50;padding:18px;
+  border-radius:var(--radius);box-shadow:var(--shadow);transform:rotate(-1deg)
 }
-.hero-image{height:min(62vh,650px);min-height:440px;border-radius:12px;overflow:hidden;position:relative;background:#202428}
+.hero-image{height:min(56vh,610px);min-height:420px;position:relative;border-radius:12px;overflow:hidden;background:#1d2125}
 .hero-image img{width:100%;height:100%;object-fit:cover}
-.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.84),transparent 56%)}
-.fallback{
-  width:100%;height:100%;display:none;align-items:center;justify-content:center;
-  background:linear-gradient(145deg,#2b3035,#101214);color:#fff;font-size:32px;font-weight:900
-}
-.hero-label{position:absolute;left:25px;right:25px;bottom:24px;z-index:3;color:#fff}
-.hero-label small{display:block;color:#ffb2b5;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
-.hero-label strong{display:block;font-size:43px;margin-top:6px}
-.hero-specs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#42484e;margin-top:13px}
-.hero-spec{background:#171a1e;padding:13px}
-.hero-spec b{display:block;font-size:16px}.hero-spec span{font-size:9px;color:#9fa6ac;text-transform:uppercase;letter-spacing:.07em}
-.trust-band{background:#fff;border-bottom:1px solid var(--line)}
-.trust-row{display:grid;grid-template-columns:repeat(5,1fr)}
-.trust-item{padding:23px 20px;border-right:1px solid var(--line)}
-.trust-item:last-child{border-right:0}
-.trust-item b{display:block;font-size:13px;margin-bottom:5px}.trust-item span{color:#747c83;font-size:11px;line-height:1.45}
+.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 48%)}
+.hero-caption{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;display:flex;justify-content:space-between;align-items:end}
+.hero-caption strong{font-size:34px}.hero-caption small{color:#d0d4d8}
+.metric-strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:14px;gap:1px;background:#40464c}
+.metric{background:#171a1e;padding:13px}
+.metric b{display:block;font-size:17px}.metric span{font-size:10px;color:#9ea5ab}
 .section{padding:96px 0}
 .section-dark{background:#111417;color:#fff}
-.section-red{background:linear-gradient(145deg,var(--red),var(--red-dark));color:#fff}
-.section-head{max-width:920px;margin-bottom:43px}
-.kicker{font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
-.section-dark .kicker,.section-red .kicker{color:#ffb6b9}
-h2{font-size:clamp(39px,5.2vw,75px);line-height:1;letter-spacing:-.045em;margin:13px 0 18px}
+.section-red{background:var(--red);color:#fff}
+.section-head{max-width:900px;margin-bottom:44px}
+.kicker{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.section-dark .kicker,.section-red .kicker{color:#ffb4b7}
+h2{font-size:clamp(39px,5vw,72px);line-height:1;letter-spacing:-.04em;margin:13px 0 18px}
 .section-head p{font-size:18px;line-height:1.65;color:var(--muted)}
-.section-dark .section-head p,.section-red .section-head p{color:#c0c6cb}
+.section-dark .section-head p{color:#b8bec4}
+.range-intro{
+  display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:end;margin-bottom:30px
+}
+.sequence-pill{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);padding:10px 13px;border-radius:999px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.sequence-pill i{width:9px;height:9px;border-radius:50%;background:var(--red)}
+.machine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.machine-card{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;
+  transition:transform .24s,box-shadow .24s,border-color .24s;cursor:pointer;min-height:520px
+}
+.machine-card:hover{transform:translateY(-7px);box-shadow:0 25px 55px rgba(0,0,0,.14);border-color:#b7bcc0}
+.machine-card.hero-model{border:2px solid var(--red);grid-column:span 2}
+.machine-photo{height:255px;background:#dedfdf;position:relative;overflow:hidden}
+.hero-model .machine-photo{height:330px}
+.machine-photo img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.machine-card:hover .machine-photo img{transform:scale(1.035)}
+.machine-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 55%)}
+.phase-badge{
+  position:absolute;top:15px;left:15px;z-index:3;padding:9px 11px;border-radius:4px;
+  background:rgba(12,14,16,.88);color:#fff;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase
+}
+.hero-model .phase-badge{background:var(--red)}
+.machine-title{position:absolute;z-index:3;left:20px;right:20px;bottom:17px;color:#fff}
+.machine-title strong{display:block;font-size:30px;letter-spacing:-.03em}.machine-title span{font-size:12px;color:#e3e5e7}
+.machine-body{padding:21px 22px 24px}
+.machine-body p{color:#596168;line-height:1.55;font-size:14px;min-height:66px}
+.quick-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.quick-spec{background:#f1f2f2;border-radius:6px;padding:10px}
+.quick-spec b{display:block;font-size:15px}.quick-spec span{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#747c83}
+.card-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px}
+.card-footer span{font-size:11px;color:#687077}.card-footer b{font-size:11px;color:var(--red);text-transform:uppercase;letter-spacing:.08em}
 .selector-shell{display:grid;grid-template-columns:.36fr .64fr;gap:22px}
 .selector-side{
-  background:linear-gradient(155deg,var(--red),var(--red-dark));padding:34px;border-radius:16px;min-height:570px;
+  background:linear-gradient(155deg,var(--red),var(--red-dark));padding:34px;border-radius:15px;min-height:600px;
   position:relative;overflow:hidden
 }
-.selector-side:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.18);right:-250px;bottom:-250px;transform:rotate(45deg)}
-.selector-side h3{font-size:39px;margin:13px 0}
-.selector-side p{color:#ffe5e6;line-height:1.6}
-.progress{height:7px;background:rgba(255,255,255,.24);border-radius:999px;overflow:hidden;margin:28px 0 11px}
-.progress i{display:block;height:100%;background:#fff;width:16.6%;transition:width .25s}
-.answer-history{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:2}
-.history-chip{background:rgba(0,0,0,.17);padding:7px 9px;border-radius:4px;font-size:9px}
-.selector-panel{background:#fff;color:#111;border-radius:16px;padding:35px;min-height:570px}
+.selector-side:after{content:"";position:absolute;width:410px;height:410px;border:1px solid rgba(255,255,255,.2);transform:rotate(45deg);right:-250px;bottom:-250px}
+.selector-side h3{font-size:38px;margin:13px 0 15px}
+.selector-side p{color:#ffe3e4;line-height:1.6}
+.progress-track{height:7px;background:rgba(255,255,255,.24);margin:28px 0 12px;border-radius:99px;overflow:hidden}
+.progress-track i{display:block;height:100%;background:#fff;width:12.5%;transition:width .25s}
+.answer-history{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px;position:relative;z-index:2}
+.history-chip{padding:7px 9px;background:rgba(0,0,0,.18);font-size:9px;border-radius:4px}
+.selector-panel{background:#fff;border-radius:15px;padding:35px;min-height:600px;color:#111}
 .step-label{font-size:10px;color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.15em}
-.question{font-size:clamp(29px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:900;margin:15px 0 28px}
+.question{font-size:clamp(27px,3vw,42px);font-weight:900;line-height:1.12;margin:15px 0 27px;letter-spacing:-.025em}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .option{
-  min-height:76px;text-align:left;border:1px solid var(--line);background:#fafafa;border-radius:8px;padding:18px;
-  font-weight:800;line-height:1.35;transition:.18s
+  text-align:left;border:1px solid var(--line);background:#fafafa;padding:18px;border-radius:8px;
+  min-height:72px;font-weight:800;line-height:1.35;transition:.17s
 }
-.option:hover,.option.active{background:#fff0f1;border-color:var(--red);box-shadow:inset 4px 0 var(--red)}
-.selector-controls{display:flex;justify-content:space-between;align-items:center;margin-top:25px}
-.back-btn{border:0;background:#eceeef;padding:12px 17px;border-radius:5px;font-weight:800}
-.auto-note{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:#858d93}
-.result-panel{display:none;background:#fff;border-radius:16px;overflow:hidden;color:#111}
+.option:hover,.option.active{border-color:var(--red);background:#fff0f1;box-shadow:inset 4px 0 var(--red)}
+.selector-controls{display:flex;justify-content:space-between;align-items:center;margin-top:27px}
+.back-btn{border:0;background:#eceeef;padding:12px 17px;font-weight:800;border-radius:5px}
+.auto-note{font-size:10px;color:#82898f;text-transform:uppercase;letter-spacing:.09em}
+.result-panel{display:none;background:#fff;border-radius:15px;overflow:hidden;color:#111}
 .result-panel.show{display:grid;grid-template-columns:.48fr .52fr}
-.result-image{min-height:590px;position:relative;background:#171a1e}
+.result-image{min-height:570px;position:relative;background:#171a1e}
 .result-image img{width:100%;height:100%;object-fit:cover}
-.result-image:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88),transparent 60%)}
-.result-name{position:absolute;z-index:2;left:28px;right:28px;bottom:27px;color:#fff}
-.result-name small{display:block;color:#ffb7ba;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.13em}
-.result-name strong{display:block;font-size:48px;margin:6px 0}
+.result-image:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),transparent 60%)}
+.result-name{position:absolute;z-index:2;left:28px;right:28px;bottom:25px;color:#fff}
+.result-name small{display:block;color:#ffb6b9;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
+.result-name strong{font-size:46px;display:block;letter-spacing:-.04em}
 .result-copy{padding:37px}
-.fit-score{font-size:74px;line-height:1;color:var(--red);font-weight:900}
-.fit-score small{font-size:14px;color:#757d83}
-.result-copy h3{font-size:29px;margin:13px 0}
-.reason-list{display:grid;gap:8px;margin:19px 0}
-.reason{background:#f1f2f3;border-left:4px solid var(--red);padding:12px 13px;font-size:13px}
-.recommendation-box{border:1px solid var(--line);background:#fafafa;border-radius:9px;padding:16px;line-height:1.55}
-.flagship{
-  display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center
+.fit-score{font-size:72px;font-weight:900;color:var(--red);line-height:1}
+.fit-score small{font-size:15px;color:#70777e}
+.result-copy h3{font-size:29px;margin:12px 0}
+.reason-list{display:grid;gap:8px;margin:20px 0}
+.reason{padding:12px 13px;background:#f1f2f3;border-left:4px solid var(--red);font-size:13px}
+.attachment-callout{border:1px solid #d9dde0;border-radius:8px;padding:16px;margin:18px 0;background:#fafafa}
+.attachment-callout b{color:var(--red)}
+.launch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.launch-phase{background:#fff;color:#111;border-radius:14px;padding:27px;position:relative;min-height:390px}
+.launch-phase .phase-no{font-size:78px;font-weight:900;color:#eceeef;line-height:.8}
+.launch-phase h3{font-size:28px;margin:15px 0}
+.launch-phase p{line-height:1.6;color:#616970}
+.launch-phase ul{padding-left:18px;line-height:1.7;color:#4e565d}
+.launch-phase.primary{border:3px solid #fff;background:#0f1215;color:#fff}
+.launch-phase.primary p,.launch-phase.primary ul{color:#c4c9cd}
+.launch-phase.primary .phase-no{color:#2b3035}
+.evidence-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
+.comparison-card{background:#fff;border:1px solid var(--line);padding:16px;border-radius:14px}
+.comparison-card img{width:100%;border-radius:8px}
+.note-stack{display:grid;gap:13px}
+.note-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.note-card h3{margin:0 0 9px}
+.note-card p{color:#626a71;line-height:1.55;font-size:14px}
+.status-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.status{font-size:9px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;padding:7px 9px;border-radius:999px}
+.status-published{background:#e2f3e9;color:#14663b}
+.status-claim{background:#fff1d4;color:#855800}
+.status-check{background:#e3edf7;color:#225f91}
+.hydro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.hydro-card{background:#1c2024;border:1px solid #343a40;border-radius:12px;padding:22px;min-height:235px}
+.hydro-card h3{font-size:25px;margin:0 0 8px}
+.hydro-card p{color:#b7bdc2;line-height:1.55;font-size:13px}
+.hydro-card strong{color:#fff}
+.matrix-wrap{overflow:auto;background:#fff;border-radius:12px;margin-top:24px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:13px 14px;border-bottom:1px solid #e3e5e7;text-align:left;font-size:12px;vertical-align:top}
+th{background:#171a1e;color:#fff;text-transform:uppercase;letter-spacing:.08em;font-size:9px;position:sticky;top:0}
+td:first-child{font-weight:800}
+.yes{color:#14663b;font-weight:900}.maybe{color:#936200;font-weight:900}.no{color:#8b1c20;font-weight:900}
+.closing{
+  min-height:82vh;display:flex;align-items:center;text-align:center;
+  background:linear-gradient(135deg,#e9e6e1,#fff);padding:90px 0
 }
-.flagship-visual{height:640px;position:relative;border-radius:18px;overflow:hidden;background:#22272c}
-.flagship-visual img{width:100%;height:100%;object-fit:cover}
-.flagship-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.76),transparent 55%)}
-.flagship-badge{position:absolute;z-index:2;left:22px;top:22px;background:var(--red);color:#fff;border-radius:4px;padding:10px 12px;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
-.flagship-caption{position:absolute;z-index:2;left:26px;right:26px;bottom:24px;color:#fff}
-.flagship-caption strong{font-size:39px;display:block}
-.flagship-copy h2{font-size:clamp(42px,5vw,72px)}
-.flagship-copy p{color:#626a71;line-height:1.7;font-size:17px}
-.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:23px 0}
-.feature{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}
-.feature b{display:block;margin-bottom:5px}.feature span{font-size:11px;color:#6e767d}
-.range-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.machine-card{
-  background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;cursor:pointer;
-  transition:transform .22s,box-shadow .22s,border-color .22s
-}
-.machine-card:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(0,0,0,.14);border-color:#b8bdc1}
-.machine-photo{height:255px;position:relative;background:#dedfdf;overflow:hidden}
-.machine-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.machine-card:hover .machine-photo img{transform:scale(1.035)}
-.machine-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 57%)}
-.machine-role{position:absolute;left:15px;top:15px;z-index:3;background:rgba(10,12,14,.87);color:#fff;padding:8px 10px;border-radius:4px;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
-.machine-title{position:absolute;z-index:3;left:20px;right:20px;bottom:17px;color:#fff}
-.machine-title strong{display:block;font-size:30px}.machine-title span{font-size:11px;color:#e0e4e6}
-.machine-body{padding:21px}
-.machine-body p{color:#60686f;line-height:1.55;font-size:13px;min-height:61px}
-.quick-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:15px 0}
-.quick-spec{background:#f1f2f3;padding:10px;border-radius:6px}
-.quick-spec b{display:block;font-size:14px}.quick-spec span{font-size:8px;color:#747d84;text-transform:uppercase;letter-spacing:.07em}
-.card-link{border-top:1px solid var(--line);padding-top:14px;color:var(--red);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-.job-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.job-card{background:#1b1f23;border:1px solid #353b41;border-radius:13px;padding:24px;min-height:230px}
-.job-card .job-no{font-size:50px;line-height:1;color:#33393f;font-weight:900}
-.job-card h3{font-size:23px;margin:13px 0 8px}
-.job-card p{color:#b2b8bd;line-height:1.55;font-size:13px}
-.attachment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.attachment-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:.22s}
-.attachment-card:hover{transform:translateY(-5px);box-shadow:0 22px 45px rgba(0,0,0,.13)}
-.attachment-photo{height:220px;background:#e0e1e1}
-.attachment-photo img{width:100%;height:100%;object-fit:cover}
-.attachment-body{padding:20px}
-.attachment-body h3{font-size:22px;margin:0 0 8px}
-.attachment-body p{font-size:12px;color:#626a71;line-height:1.55;min-height:56px}
-.promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-.promise{background:#fff;color:#111;border-radius:13px;padding:23px;min-height:260px}
-.promise .promise-no{font-size:55px;line-height:1;color:#eceeef;font-weight:900}
-.promise h3{font-size:23px;margin:12px 0}
-.promise p{color:#606970;font-size:13px;line-height:1.6}
-.package-shell{display:grid;grid-template-columns:.58fr .42fr;gap:22px}
-.builder{background:#fff;border-radius:15px;padding:28px;color:#111}
-.builder-group{margin-bottom:25px}
-.builder-group h3{font-size:21px;margin:0 0 13px}
-.choice-row{display:flex;flex-wrap:wrap;gap:8px}
-.choice-btn{
-  border:1px solid var(--line);background:#f7f7f6;border-radius:999px;padding:11px 13px;font-size:10px;font-weight:900;
-  text-transform:uppercase;letter-spacing:.07em
-}
-.choice-btn.active{background:#171a1e;color:#fff;border-color:#171a1e}
-.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.check-item{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:7px;padding:12px;font-size:12px}
-.check-item input{accent-color:var(--red)}
-.package-summary{background:linear-gradient(155deg,var(--red),var(--red-dark));color:#fff;border-radius:15px;padding:29px;position:sticky;top:96px;min-height:500px}
-.package-summary small{font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:900;color:#ffd4d6}
-.package-summary h3{font-size:38px;margin:12px 0}
-.summary-list{display:grid;gap:9px;margin:20px 0}
-.summary-item{background:rgba(0,0,0,.16);border-radius:6px;padding:12px;font-size:12px;line-height:1.45}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.field{display:grid;gap:6px}
-.field.full{grid-column:1/-1}
-.field label{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#555e65}
-.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa}
-.field textarea{min-height:90px;resize:vertical}
-.success{display:none;margin-top:15px;background:#e5f4eb;color:#17623d;border-left:5px solid var(--green);padding:14px;border-radius:7px;font-size:13px}
-.final-cta{
-  min-height:77vh;display:flex;align-items:center;text-align:center;color:#fff;
-  background:
-    radial-gradient(circle at 50% 18%,rgba(215,25,32,.25),transparent 35%),
-    linear-gradient(135deg,#080a0c,#181c20 60%,#090b0d)
-}
-.final-cta .inner{max-width:1050px;margin:auto}
-.final-cta h2{font-size:clamp(50px,8vw,110px)}
-.final-cta h2 span{color:var(--red)}
-.final-cta p{max-width:780px;margin:0 auto;color:#c6cbd0;font-size:19px;line-height:1.65}
-footer{background:#080a0c;color:#91999f;padding:27px 4vw;font-size:10px;line-height:1.65}
-.panel-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.67);z-index:200;display:none}
+.closing-inner{max-width:1100px;margin:auto}
+.closing h2{font-size:clamp(48px,8vw,108px)}
+.closing h2 span{color:var(--red)}
+.flow{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin:38px 0}
+.flow span{background:#15181b;color:#fff;padding:14px 16px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.flow b{color:var(--red);font-size:22px}
+.final-line{font-size:clamp(23px,3vw,39px);font-weight:900;color:var(--red)}
+footer{background:#090b0d;color:#979ea4;padding:26px 4vw;font-size:10px;line-height:1.6}
+.source-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
+.source-links a{color:#c8cdd1}
+.panel-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.66);z-index:200;display:none}
 .panel-backdrop.open{display:block}
-.detail-panel{
-  position:fixed;z-index:201;top:0;right:0;bottom:0;width:min(780px,96vw);background:#fff;
+.spec-panel{
+  position:fixed;z-index:201;right:0;top:0;bottom:0;width:min(780px,96vw);background:#fff;
   transform:translateX(105%);transition:transform .28s;overflow:auto;box-shadow:-20px 0 60px rgba(0,0,0,.28)
 }
-.detail-panel.open{transform:translateX(0)}
-.panel-close{position:sticky;top:15px;float:right;z-index:8;margin:15px 15px 0 0;width:43px;height:43px;border-radius:50%;border:0;background:#111;color:#fff;font-size:22px}
-.panel-hero{height:390px;position:relative;background:#22272c}
+.spec-panel.open{transform:translateX(0)}
+.panel-close{position:sticky;top:15px;float:right;margin:15px 15px 0 0;z-index:6;width:43px;height:43px;border-radius:50%;border:0;background:#111;color:#fff;font-size:22px}
+.panel-hero{height:390px;position:relative;background:#202428}
 .panel-hero img{width:100%;height:100%;object-fit:cover}
-.panel-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.87),transparent 61%)}
+.panel-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.86),transparent 62%)}
 .panel-head{position:absolute;z-index:2;left:30px;right:70px;bottom:26px;color:#fff}
-.panel-head small{color:#ffb3b6;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.13em}
-.panel-head h2{font-size:49px;margin:8px 0 6px}
+.panel-head small{color:#ffb3b6;text-transform:uppercase;letter-spacing:.13em;font-weight:900}
+.panel-head h2{font-size:48px;margin:8px 0 6px}
 .panel-content{padding:30px}
-.panel-lead{font-size:18px;color:#535c63;line-height:1.65}
-.spec-table{width:100%;border-collapse:collapse}
-.spec-table td{border-bottom:1px solid #e3e5e7;padding:13px 10px;font-size:12px;vertical-align:top}
-.spec-table td:first-child{width:42%;color:#626a71}
-.spec-table td:last-child{font-weight:800}
-.panel-columns{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:21px}
-.panel-box{border:1px solid var(--line);border-radius:9px;padding:17px}
-.panel-box h3{margin:0 0 10px}
-.panel-box ul{margin:0;padding-left:18px;color:#555e65;line-height:1.7;font-size:12px}
-.data-note{margin-top:20px;background:#171a1e;color:#fff;border-left:7px solid var(--red);padding:17px;line-height:1.55}
-@media(max-width:1060px){
-  .hero{grid-template-columns:1fr}.hero-visual{max-width:820px}
-  .trust-row{grid-template-columns:repeat(3,1fr)}
-  .flagship{grid-template-columns:1fr}.flagship-visual{height:560px}
-  .range-grid,.attachment-grid,.job-grid{grid-template-columns:1fr 1fr}
-  .selector-shell,.package-shell{grid-template-columns:1fr}.selector-side{min-height:auto}
-  .promise-grid{grid-template-columns:1fr 1fr}.nav{display:none}
-  .package-summary{position:static}
+.panel-lead{font-size:18px;line-height:1.6;color:#525b62}
+.spec-table td{font-size:13px}
+.spec-table td:first-child{width:41%;color:#606970}
+.spec-value{font-weight:800}
+.panel-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.panel-box{border:1px solid var(--line);padding:18px;border-radius:10px}
+.panel-box h3{margin-top:0}
+.panel-box ul{padding-left:18px;line-height:1.7;color:#555f66;font-size:13px}
+.data-warning{margin-top:20px;background:#171a1e;color:#fff;border-left:7px solid var(--red);padding:18px;line-height:1.55}
+.fallback{
+  width:100%;height:100%;display:none;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,#2a2f34,#101214);color:#fff;font-size:28px;font-weight:900
+}
+@media(max-width:1050px){
+  .hero{grid-template-columns:1fr}.hero-machine{max-width:800px}
+  .machine-grid{grid-template-columns:1fr 1fr}.hero-model{grid-column:span 2}
+  .selector-shell{grid-template-columns:1fr}.selector-side{min-height:auto}
+  .launch-grid,.hydro-grid{grid-template-columns:1fr 1fr}
+  .evidence-grid{grid-template-columns:1fr}.nav{display:none}
 }
 @media(max-width:690px){
-  .site-header{height:63px}.header-cta{display:none}.brand{font-size:12px}
-  .hero{padding-top:95px}.hero-specs,.trust-row{grid-template-columns:1fr 1fr}
-  .options,.range-grid,.attachment-grid,.job-grid,.promise-grid,.feature-list,.check-grid,.form-grid,.panel-columns{grid-template-columns:1fr}
-  .result-panel.show{grid-template-columns:1fr}.result-image{min-height:400px}
-  .section{padding:72px 0}.selector-panel{padding:24px}.selector-side{padding:26px}
+  .topbar{height:62px}.brand{font-size:12px}.meeting-btn{display:none}
+  .hero{padding-top:95px}.hero-points,.metric-strip{grid-template-columns:1fr 1fr}
+  .machine-grid,.launch-grid,.hydro-grid,.options,.panel-columns{grid-template-columns:1fr}
+  .hero-model{grid-column:span 1}.hero-model .machine-photo{height:255px}
+  .result-panel.show{grid-template-columns:1fr}.result-image{min-height:390px}
+  .range-intro{grid-template-columns:1fr}.section{padding:72px 0}
+  .selector-panel{padding:24px}.selector-side{padding:26px}
   .panel-hero{height:330px}.panel-head h2{font-size:39px}
 }
 
-.video-pill{
-  position:absolute;z-index:4;right:14px;top:14px;
-  display:inline-flex;align-items:center;gap:7px;
-  border:1px solid rgba(255,255,255,.35);background:rgba(10,12,14,.84);color:#fff;
-  padding:8px 10px;border-radius:999px;font-size:8px;font-weight:900;
-  text-transform:uppercase;letter-spacing:.09em;backdrop-filter:blur(8px)
+.matrix-wrap td{color:#182026}
+.matrix-wrap th:first-child,
+.matrix-wrap td:first-child{
+  position:sticky;left:0;z-index:4;min-width:245px
 }
-.watch-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.watch-btn{display:inline-flex;align-items:center;gap:8px}
-.watch-btn .play-dot{
-  width:25px;height:25px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
-  background:#fff;color:var(--red);font-size:10px
+.matrix-wrap th:first-child{background:#171a1e;color:#fff}
+.matrix-wrap td:first-child{background:#fff;border-right:1px solid #dfe2e4}
+.attachment-link{
+  width:100%;border:0;background:transparent;padding:0;text-align:left;color:#111;
+  font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:12px
 }
-.video-modal{
-  position:fixed;z-index:350;inset:0;display:none;align-items:center;justify-content:center;
-  padding:28px;background:rgba(2,4,5,.88);backdrop-filter:blur(10px)
+.attachment-link:hover{color:var(--red)}
+.attachment-link small{
+  display:block;margin-top:4px;color:#7b838a;font-size:9px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.08em
 }
-.video-modal.open{display:flex}
-.video-shell{
-  width:min(1180px,96vw);max-height:94vh;overflow:auto;border-radius:17px;
-  background:#111417;color:#fff;border:1px solid #3d4349;box-shadow:0 35px 100px rgba(0,0,0,.55)
+.attachment-link .arrow{
+  width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;
+  border-radius:50%;background:#eef0f1;color:var(--red);flex:0 0 auto
 }
-.video-top{
-  display:flex;justify-content:space-between;align-items:flex-start;gap:18px;
-  padding:22px 24px;border-bottom:1px solid #343a40
+.matrix-disclaimer{
+  margin:20px 0 0;padding:16px 18px;border:1px solid #3b4248;border-left:5px solid var(--amber);
+  border-radius:9px;background:#181c20;color:#c6cbd0;font-size:12px;line-height:1.6
 }
-.video-top small{
-  color:#ff8f94;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.13em
+.attachment-availability{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;padding:9px 11px;
+  border-radius:999px;background:#e4f3e9;color:#17643c;font-size:10px;font-weight:900;
+  text-transform:uppercase;letter-spacing:.08em
 }
-.video-top h3{font-size:29px;margin:7px 0 0}
-.video-close{
-  width:43px;height:43px;flex:0 0 auto;border:0;border-radius:50%;
-  background:#fff;color:#111;font-size:22px
-}
-.video-frame-wrap{
-  position:relative;width:100%;aspect-ratio:16/9;background:#000
-}
-.video-frame-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.video-info{display:grid;grid-template-columns:.58fr .42fr;gap:22px;padding:24px}
-.video-copy p{color:#c4c9cd;line-height:1.65;margin-top:0}
-.video-observe{
-  border:1px solid #353b41;background:#1b1f23;border-radius:10px;padding:18px
-}
-.video-observe h4{margin:0 0 10px}
-.video-observe ul{padding-left:18px;margin:0;color:#c6cbd0;line-height:1.7;font-size:12px}
-.video-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.video-source-note{font-size:10px;color:#8f989f;margin-top:12px;line-height:1.55}
-@media(max-width:760px){
-  .video-modal{padding:10px}.video-info{grid-template-columns:1fr;padding:18px}
-  .video-top h3{font-size:23px}.video-top{padding:18px}
+.attachment-availability.future{background:#fff0d5;color:#855800}
+.attachment-fit-note{
+  margin-top:18px;padding:16px;border-radius:9px;background:#fff5dc;border-left:5px solid var(--amber);
+  color:#5c4a1f;line-height:1.55;font-size:13px
 }
 
 
-.video-local-fallback{
-  position:absolute;inset:0;display:none;align-items:center;justify-content:center;
-  text-align:center;overflow:hidden;background:#111
+.attachment-link::after{
+  content:"View data sheet";
+  display:inline-block;
+  margin-left:auto;
+  margin-right:8px;
+  padding:7px 9px;
+  border-radius:4px;
+  background:#171a1e;
+  color:#fff;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
 }
-.video-local-fallback.show{display:flex}
-.video-local-fallback img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.video-local-shade{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.86))}
-.video-local-copy{position:relative;z-index:2;max-width:580px;padding:30px;color:#fff}
-.video-local-copy h4{font-size:30px;margin:13px 0 9px}
-.video-local-copy p{color:#d0d5d8;line-height:1.55;margin:0 0 18px}
-.local-play{
-  width:72px;height:72px;margin:auto;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--red);color:#fff;font-size:25px;padding-left:4px;
-  box-shadow:0 15px 38px rgba(215,25,32,.38)
+.attachment-link:hover::after{background:var(--red)}
+@media(max-width:900px){
+  .attachment-link::after{display:none}
 }
-.local-mode-note{
-  display:none;margin:0 24px 20px;padding:13px 15px;border-left:5px solid var(--amber);
-  border-radius:7px;background:#fff3d8;color:#624813;font-size:11px;line-height:1.55
+
+
+/* Integrated Australian Market Strategy */
+.strategy-transition{
+  min-height:72vh;display:flex;align-items:center;text-align:center;color:#fff;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 10%,rgba(215,25,32,.25),transparent 36%),
+    linear-gradient(135deg,#080a0c,#181c20 60%,#090b0d)
 }
-.local-mode-note.show{display:block}
+.strategy-transition:before{
+  content:"";position:absolute;inset:0;opacity:.13;
+  background-image:linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+  background-size:64px 64px
+}
+.strategy-transition .container{position:relative;z-index:2}
+.strategy-transition h2{font-size:clamp(49px,7vw,98px)}
+.strategy-transition h2 span{color:var(--red)}
+.strategy-transition p{max-width:820px;margin:0 auto 30px;color:#c8cdd1;font-size:20px;line-height:1.65}
+.strategy-section{padding:100px 0}
+.strategy-paper{background:#f2f0ec}
+.strategy-ink{background:#101316;color:#fff}
+.strategy-red{background:linear-gradient(145deg,#d71920,#9e0d13);color:#fff}
+.strategy-head{max-width:960px;margin-bottom:45px}
+.strategy-head p{font-size:18px;line-height:1.65;color:#697179}
+.strategy-ink .strategy-head p,.strategy-red .strategy-head p{color:#c0c6cb}
+.opportunity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.opportunity-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;min-height:245px}
+.opportunity-card .icon-no{font-size:44px;font-weight:900;color:#e7e9ea;line-height:1}
+.opportunity-card h3{font-size:23px;margin:12px 0 8px}
+.opportunity-card p{color:#626a71;line-height:1.55;font-size:14px}
+.opportunity-card b{color:var(--red)}
+.buyer-split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.buyer-column{border-radius:16px;padding:29px;background:#fff;color:#111}
+.buyer-column.avoid{background:#1b1f23;color:#fff;border:1px solid #353b41}
+.buyer-column h3{font-size:28px;margin:0 0 18px}
+.buyer-column ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.buyer-column li{position:relative;padding:12px 12px 12px 42px;border-radius:7px;background:#f3f4f4;line-height:1.45}
+.buyer-column.avoid li{background:#262b30;color:#d2d6d9}
+.buyer-column li:before{position:absolute;left:14px;top:11px;font-weight:900}
+.buyer-column.want li:before{content:"✓";color:var(--green)}
+.buyer-column.avoid li:before{content:"×";color:#ff565c}
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.risk-card{
+  border:1px solid #383e44;background:#1b1f23;color:#fff;border-radius:13px;padding:23px;min-height:210px;
+  cursor:pointer;transition:.2s
+}
+.risk-card:hover,.risk-card.active{border-color:var(--red);transform:translateY(-4px);background:#22272c}
+.risk-card .risk-index{font-size:11px;color:#ff7b80;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.risk-card h3{font-size:23px;margin:13px 0 9px}
+.risk-card p{color:#adb4ba;line-height:1.55;font-size:13px}
+.risk-detail{
+  margin-top:20px;border-left:7px solid var(--red);border-radius:10px;background:#fff;color:#111;padding:25px;
+  display:grid;grid-template-columns:.42fr .58fr;gap:22px;align-items:start
+}
+.risk-detail h3{font-size:31px;margin:0}
+.risk-detail p{line-height:1.65;color:#596168;margin:0}
+.risk-detail ul{margin:12px 0 0;padding-left:19px;line-height:1.7;color:#4f575e}
+.name-lab{display:grid;grid-template-columns:.42fr .58fr;gap:24px;align-items:stretch}
+.name-controls{background:#fff;border-radius:15px;padding:27px;color:#111}
+.name-controls h3{font-size:29px;margin:0 0 9px}
+.name-controls p{color:#626a71;line-height:1.55}
+.name-buttons{display:grid;gap:9px;margin-top:20px}
+.name-choice{
+  border:1px solid var(--line);background:#f7f7f6;border-radius:7px;padding:14px 15px;text-align:left;font-weight:900;
+  display:flex;justify-content:space-between;align-items:center
+}
+.name-choice:hover,.name-choice.active{background:#fff0f1;border-color:var(--red);box-shadow:inset 4px 0 var(--red)}
+.name-choice span{font-size:10px;color:#777f85;text-transform:uppercase;letter-spacing:.08em}
+.name-preview{
+  min-height:540px;border-radius:15px;overflow:hidden;position:relative;background:#171a1e;color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end
+}
+.name-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.name-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.93),rgba(0,0,0,.12) 65%)}
+.name-preview-content{position:relative;z-index:2;padding:32px}
+.name-preview small{color:#ff9ea2;text-transform:uppercase;letter-spacing:.14em;font-weight:900}
+.name-preview h3{font-size:clamp(39px,5vw,67px);line-height:.95;margin:12px 0}
+.name-preview p{font-size:18px;line-height:1.55;color:#d1d5d8;max-width:600px}
+.name-score{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.name-score span{padding:8px 10px;border:1px solid #555d64;border-radius:999px;font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+.identity-problem{margin-top:20px;padding:18px;background:#fff6dd;color:#5c491b;border-left:6px solid var(--amber);border-radius:9px;line-height:1.6}
+.truth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.truth-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:21px;min-height:310px}
+.truth-card h3{font-size:21px;margin:0 0 12px}
+.truth-source{display:grid;gap:8px;margin-top:15px}
+.truth-source div{padding:10px;border-radius:6px;background:#f1f2f3;font-size:12px;line-height:1.45}
+.truth-source b{display:block;color:#7a8289;font-size:9px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.truth-conclusion{margin-top:19px;padding:24px;background:#111417;color:#fff;border-left:7px solid var(--red);font-size:24px;font-weight:900}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.proof-card{border:1px solid #343a40;background:#1b1f23;border-radius:13px;padding:23px;min-height:230px}
+.proof-card .proof-no{font-size:49px;font-weight:900;color:#343a40;line-height:1}
+.proof-card h3{font-size:22px;margin:13px 0 8px}
+.proof-card p{color:#b2b8bd;font-size:13px;line-height:1.55}
+.social-transform{display:grid;grid-template-columns:1fr 80px 1fr;align-items:stretch;gap:15px;margin-top:25px}
+.social-box{border-radius:14px;padding:27px;background:#fff;color:#111}
+.social-box.current{background:#1b1f23;color:#fff;border:1px solid #363c42}
+.social-box h3{font-size:27px;margin:0 0 16px}
+.social-box ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.social-box li{padding:11px 12px;border-radius:6px;background:#f1f2f3;line-height:1.45}
+.social-box.current li{background:#282d32;color:#c8cdd1}
+.transform-arrow{display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:900;color:var(--red)}
+.support-journey{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.support-step{background:#fff;border-radius:13px;padding:22px;color:#111;min-height:260px}
+.support-step .step-no{font-size:54px;color:#eceeef;font-weight:900;line-height:1}
+.support-step h3{font-size:22px;margin:12px 0}
+.support-step ul{padding-left:18px;line-height:1.7;color:#596168;font-size:13px}
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d5d8da;border-radius:15px;overflow:hidden}
+.roadmap-step{background:#fff;color:#111;padding:25px;min-height:330px}
+.roadmap-step.highlight{background:#111417;color:#fff}
+.roadmap-step .days{color:var(--red);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.13em}
+.roadmap-step h3{font-size:25px;margin:13px 0}
+.roadmap-step p{color:#60686f;line-height:1.55;font-size:13px}
+.roadmap-step.highlight p{color:#c2c7cb}
+.decision-gate{margin-top:16px;border-top:1px solid #d9dde0;padding-top:14px;font-size:11px;font-weight:900;line-height:1.45}
+.roadmap-step.highlight .decision-gate{border-color:#3d4349}
+.evidence-standard{overflow:auto;border-radius:13px;background:#fff}
+.evidence-standard table th{position:static}
+.strategy-footer-note{margin-top:22px;font-size:11px;color:#868e95;line-height:1.6}
+@media(max-width:1050px){
+  .opportunity-grid,.risk-grid,.proof-grid{grid-template-columns:1fr 1fr}
+  .truth-grid,.support-journey,.roadmap{grid-template-columns:1fr 1fr}
+  .name-lab,.risk-detail{grid-template-columns:1fr}
+}
+@media(max-width:690px){
+  .opportunity-grid,.risk-grid,.proof-grid,.truth-grid,.support-journey,.roadmap,.buyer-split{grid-template-columns:1fr}
+  .social-transform{grid-template-columns:1fr}.transform-arrow{transform:rotate(90deg)}
+  .strategy-section{padding:72px 0}.name-preview{min-height:440px}
+}
+
+
+.risk-card{position:relative;padding-bottom:54px}
+.risk-card:after{
+  content:"Open analysis →";
+  position:absolute;left:23px;bottom:20px;
+  color:#ff7b80;font-size:9px;font-weight:900;
+  text-transform:uppercase;letter-spacing:.1em
+}
+.risk-card:hover:after,.risk-card.active:after{color:#fff}
+.risk-panel-hero{
+  min-height:310px;padding:42px 34px;display:flex;flex-direction:column;justify-content:flex-end;
+  color:#fff;background:
+    radial-gradient(circle at 82% 18%,rgba(215,25,32,.30),transparent 30%),
+    linear-gradient(145deg,#0d1013,#22272c)
+}
+.risk-panel-hero small{
+  color:#ff9da1;font-weight:900;text-transform:uppercase;letter-spacing:.14em
+}
+.risk-panel-hero h2{font-size:48px;margin:12px 0 8px}
+.risk-panel-lead{font-size:19px;line-height:1.6;color:#505960}
+.risk-panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.risk-panel-box{border:1px solid var(--line);border-radius:10px;padding:18px;background:#fafafa}
+.risk-panel-box h3{margin:0 0 10px;font-size:20px}
+.risk-panel-box ul{margin:0;padding-left:18px;line-height:1.7;color:#535c63;font-size:13px}
+.risk-question{
+  margin-top:18px;padding:18px;border-radius:9px;background:#171a1e;color:#fff;
+  border-left:6px solid var(--red);line-height:1.6
+}
+@media(max-width:690px){
+  .risk-panel-grid{grid-template-columns:1fr}
+  .risk-panel-hero h2{font-size:39px}
+}
 
 </style>
 </head>
 <body>
-<header class="site-header">
+
+<noscript>
+  <div style="position:fixed;z-index:9999;left:20px;right:20px;top:90px;background:#fff3cd;color:#5f4b13;border:2px solid #e6a125;padding:18px;font-family:Arial,sans-serif;font-weight:700">
+    This interactive demo requires JavaScript. Please open it in Chrome, Edge, Safari or Firefox with JavaScript enabled.
+  </div>
+</noscript>
+
+<header class="topbar">
   <div class="brand"><div class="brand-mark"></div>TOVISEN <span>AUSTRALIA</span></div>
   <nav class="nav">
-    <a href="#finder">Find your machine</a>
-    <a href="#flagship">V1000</a>
     <a href="#range">Range</a>
-    <a href="#attachments">Attachments</a>
-    <a href="#support">Why TOVISEN</a>
+    <a href="#selector">Selector</a>
+    <a href="#sequence">Launch plan</a>
+    <a href="#hydraulics">Hydraulics</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#strategy">Market Strategy</a>
+    <a href="customer.html" target="_blank" rel="noopener">Customer Landing Page</a>
   </nav>
-  <button class="header-cta" data-scroll="#build">Build my package</button>
+  <div style="display:flex;gap:8px;align-items:center"><a href="customer.html" target="_blank" rel="noopener" class="meeting-btn" style="text-decoration:none">Open customer site + working videos</a><button class="meeting-btn" id="fullscreenBtn">Presentation mode</button></div>
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-copy">
-    <div class="eyebrow">TOVISEN Australia</div>
-    <h1>Industrial-grade compact loaders.<span>Built for real work.</span></h1>
-    <p>Strong capability, practical machine choices and a clearer Australian ownership experience - for acreage, fencing, landscaping, facilities, property maintenance and specialist work.</p>
+    <div class="eyebrow">Australian market-entry concept</div>
+    <h1>Not just a machine range.<span>A market system.</span></h1>
+    <p>A guided Australian buying experience that connects the customer’s job, site, access, attachment and operating conditions to the right TOVISEN machine.</p>
     <div class="actions">
-      <button class="btn btn-red" data-scroll="#finder">Find my machine</button>
-      <button class="btn btn-light" data-scroll="#range">Explore the range</button>
-      <button class="btn btn-outline" data-scroll="#build">Build my package</button>
+      <button class="btn btn-red" data-scroll="#selector">Find the right machine</button>
+      <button class="btn btn-outline" data-scroll="#sequence">See the launch sequence</button>
+      <button class="btn btn-light" data-scroll="#strategy">Australian market strategy</button>
     </div>
-    <div class="hero-note">Australian launch concept. Final local configurations, specifications, warranty and availability would be confirmed before retail release.</div>
+    <div class="hero-points">
+      <div class="hero-point"><b>Phase 1</b><br>Launch and prove the V1000</div>
+      <div class="hero-point"><b>Phase 2</b><br>Segment the smaller machines</div>
+      <div class="hero-point"><b>Phase 3</b><br>Pilot the V2000 with specialists</div>
+    </div>
   </div>
-  <div class="hero-visual">
+  <div class="hero-machine">
     <div class="hero-card">
       <div class="hero-image">
-        <img src="https://e-zan.com/zb_users/upload/2025/07/202507251753431971282620.jpg" alt="TOVISEN V1000 compact tracked loader" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img src="https://e-zan.com/zb_users/upload/2025/07/202507251753431971282620.jpg" alt="TOVISEN V1000 tracked mini skid steer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="fallback">TOVISEN V1000</div>
-        <div class="hero-label"><small>Proposed Australian flagship</small><strong>V1000 WORKHORSE</strong></div>
+        <div class="hero-caption"><div><small>Recommended first Australian model</small><strong>V1000</strong></div><small>Workhorse launch strategy</small></div>
       </div>
-      <div class="hero-specs">
-        <div class="hero-spec"><b>960 mm</b><span>Published width</span></div>
-        <div class="hero-spec"><b>Kubota</b><span>D1105 option</span></div>
-        <div class="hero-spec"><b>Vertical</b><span>Lift path</span></div>
-        <div class="hero-spec"><b>40 L</b><span>Published fuel capacity</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="trust-band">
-  <div class="container trust-row">
-    <div class="trust-item"><b>Built around real jobs</b><span>Machines selected by work, access, terrain and attachment.</span></div>
-    <div class="trust-item"><b>Straightforward specifications</b><span>Clear data and configuration control for Australia.</span></div>
-    <div class="trust-item"><b>Attachment matching</b><span>Flow, pressure, weight and cooling considered together.</span></div>
-    <div class="trust-item"><b>Australian support pathway</b><span>Local parts, service contacts and warranty clarity.</span></div>
-    <div class="trust-item"><b>Proof before hype</b><span>Real operators, measurable tests and honest ownership stories.</span></div>
-  </div>
-</section>
-
-<section class="section section-dark" id="finder">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Find your TOVISEN</div>
-      <h2>The right machine starts with the right questions.</h2>
-      <p>Tell us where you work, the access you have, the terrain you face and the attachment you need. The selector will recommend a machine and a practical alternative.</p>
-    </div>
-    <div class="selector-shell" id="selectorShell">
-      <aside class="selector-side">
-        <div class="step-label" style="color:#fff">Guided recommendation</div>
-        <h3>Match the machine to the job.</h3>
-        <p>Six quick questions separate electric, wheeled, narrow-access, acreage, workhorse and specialist requirements.</p>
-        <div class="progress"><i id="progressBar"></i></div>
-        <div id="progressText">Question 1 of 6</div>
-        <div class="answer-history" id="answerHistory"></div>
-      </aside>
-      <section class="selector-panel">
-        <div class="step-label" id="stepLabel">Question 01</div>
-        <div class="question" id="questionText"></div>
-        <div class="options" id="options"></div>
-        <div class="selector-controls">
-          <button class="back-btn" id="backBtn">Back</button>
-          <span class="auto-note">Choose once - the next question opens automatically</span>
-        </div>
-      </section>
-    </div>
-    <div class="result-panel" id="resultPanel"></div>
-  </div>
-</section>
-
-<section class="section" id="flagship">
-  <div class="container flagship">
-    <div class="flagship-visual">
-      <img src="https://e-zan.com/zb_users/upload/2025/07/202507251753431971282620.jpg" alt="TOVISEN V1000">
-      <div class="flagship-badge">The machine we would launch first</div>
-      <div class="flagship-caption"><strong>V1000</strong><span>Compact tracked capability for the work Australians actually do.</span></div>
-    </div>
-    <div class="flagship-copy">
-      <div class="kicker">Australian flagship</div>
-      <h2>One serious machine for many real jobs.</h2>
-      <p>The V1000 sits at the centre of the proposed range because it combines narrow access, tracked traction, vertical lift, a familiar diesel option and a broad attachment pathway.</p>
-      <div class="feature-list">
-        <div class="feature"><b>Narrow access</b><span>Published 960 mm body width.</span></div>
-        <div class="feature"><b>Recognised engine option</b><span>Kubota D1105 published configuration.</span></div>
-        <div class="feature"><b>Tracked platform</b><span>For mixed property, landscaping and rural work.</span></div>
-        <div class="feature"><b>Attachment versatility</b><span>Auger, trencher, grapple, selected stump grinder and low-flow mulcher pathways.</span></div>
-      </div>
-      <div class="actions">
-        <button class="btn btn-red" data-machine="v1000">View V1000 data</button>
-        <button class="btn btn-dark" data-scroll="#build">Build a V1000 package</button>
+      <div class="metric-strip">
+        <div class="metric"><b>960 mm</b><span>Published width</span></div>
+        <div class="metric"><b>18.5 kW</b><span>Kubota option</span></div>
+        <div class="metric"><b>1,658 kg</b><span>Published weight</span></div>
+        <div class="metric"><b>650 kg*</b><span>Maximum lifting-force claim</span></div>
       </div>
     </div>
   </div>
@@ -467,580 +544,1104 @@ footer{background:#080a0c;color:#91999f;padding:27px 4vw;font-size:10px;line-hei
 
 <section class="section" id="range">
   <div class="container">
-    <div class="section-head">
-      <div class="kicker">Australian range concept</div>
-      <h2>Six machines. Six clear reasons to choose.</h2>
-      <p>Not every customer needs the largest machine. The range covers electric indoor work, firm surfaces, narrow tracked access, open acreage, a versatile workhorse and specialist high-output applications.</p>
-    </div>
-    <div class="range-grid" id="machineGrid"></div>
-  </div>
-</section>
-
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Built around Australian jobs</div>
-      <h2>Choose by the work - not by the model number.</h2>
-      <p>Each application creates a different balance of access, traction, capacity, hydraulic demand and ownership cost.</p>
-    </div>
-    <div class="job-grid">
-      <article class="job-card"><div class="job-no">01</div><h3>Acreage and rural property</h3><p>Fencing, drainage, gravel, soil, cleanup, pallets, augers and general property work.</p></article>
-      <article class="job-card"><div class="job-no">02</div><h3>Landscaping</h3><p>Narrow access, soil movement, trenching, levelling, materials and finished-site care.</p></article>
-      <article class="job-card"><div class="job-no">03</div><h3>Fencing contractors</h3><p>Post holes, strainers, trenching, material transport and rough-ground mobility.</p></article>
-      <article class="job-card"><div class="job-no">04</div><h3>Facilities and warehouses</h3><p>Quiet electric operation, firm surfaces, pallets, indoor movement and predictable shifts.</p></article>
-      <article class="job-card"><div class="job-no">05</div><h3>Builders and contractors</h3><p>Compact loader capability without the bulk and ownership cost of a full-size machine.</p></article>
-      <article class="job-card"><div class="job-no">06</div><h3>Tree and vegetation work</h3><p>Grapples, stump grinding, brush management and specialist hydraulic attachments.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="attachments">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Turn one machine into many</div>
-      <h2>Attachments matched to the machine and the job.</h2>
-      <p>Click any attachment to see its published TOVISEN data and the machine-fit considerations that matter.</p>
-    </div>
-    <div class="attachment-grid" id="attachmentGrid"></div>
-  </div>
-</section>
-
-<section class="section section-red" id="support">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">The Australian standard we are building</div>
-      <h2>Capability is only half the ownership experience.</h2>
-      <p>The Australian offer should combine the machine with visible proof, clear parts support, understandable warranty terms and straightforward communication.</p>
-    </div>
-    <div class="promise-grid">
-      <article class="promise"><div class="promise-no">01</div><h3>Industrial-grade value</h3><p>Serious capability at a sensible price - positioned above bargain imports and below the cost of established premium brands.</p></article>
-      <article class="promise"><div class="promise-no">02</div><h3>Real-world proof</h3><p>Australian heat, dust, terrain, tracks, hydraulics, attachments and long work sessions tested and documented.</p></article>
-      <article class="promise"><div class="promise-no">03</div><h3>Parts and service clarity</h3><p>Fast-moving parts, named service contacts, manuals and defined machine-down response pathways.</p></article>
-      <article class="promise"><div class="promise-no">04</div><h3>Honest ownership support</h3><p>Clear warranty coverage, operator handover, service intervals and independent owner feedback.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-dark" id="build">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Build your Australian package</div>
-      <h2>Machine. Attachments. Work plan.</h2>
-      <p>Create a concept package, download the summary and prepare an enquiry for the Australian launch programme.</p>
-    </div>
-    <div class="package-shell">
-      <div class="builder">
-        <div class="builder-group">
-          <h3>1. Choose a machine</h3>
-          <div class="choice-row" id="builderMachines"></div>
-        </div>
-        <div class="builder-group">
-          <h3>2. Choose up to three attachments</h3>
-          <div class="check-grid" id="builderAttachments"></div>
-        </div>
-        <div class="builder-group">
-          <h3>3. Tell us about the work</h3>
-          <div class="form-grid">
-            <div class="field"><label>Name</label><input id="leadName" type="text" placeholder="Your name"></div>
-            <div class="field"><label>Email</label><input id="leadEmail" type="email" placeholder="name@example.com"></div>
-            <div class="field"><label>State</label><select id="leadState"><option>Queensland</option><option>New South Wales</option><option>Victoria</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>ACT</option><option>Northern Territory</option></select></div>
-            <div class="field"><label>Timing</label><select id="leadTiming"><option>Researching now</option><option>Within 3 months</option><option>Within 6 months</option><option>Future planning</option></select></div>
-            <div class="field full"><label>Primary job</label><textarea id="leadJob" placeholder="Tell us what you need the machine to do..."></textarea></div>
-          </div>
-        </div>
-        <div class="actions">
-          <button class="btn btn-red" id="prepareEnquiry">Prepare my enquiry</button>
-          <button class="btn btn-dark" id="downloadBuild">Download build summary</button>
-        </div>
-        <div class="success" id="successMessage">Your concept package is ready. In a production site, this would be sent to the Australian launch team.</div>
+    <div class="range-intro">
+      <div>
+        <div class="kicker">Six-machine Australian concept range</div>
+        <h2>One clear job for every model.</h2>
       </div>
-      <aside class="package-summary">
-        <small>Your concept build</small>
-        <h3 id="summaryMachine">V1000</h3>
-        <div class="summary-list">
-          <div class="summary-item"><b>Position:</b><br><span id="summaryRole">Australian workhorse</span></div>
-          <div class="summary-item"><b>Attachments:</b><br><span id="summaryAttachments">No attachments selected</span></div>
-          <div class="summary-item"><b>Use case:</b><br><span id="summaryJob">Add your primary job to complete the package.</span></div>
-        </div>
-        <p style="color:#ffe2e3;line-height:1.6;font-size:12px">Final machine selection would be confirmed against access, terrain, load, hydraulic requirements, transport and the exact Australian configuration.</p>
+      <div>
+        <p style="color:#626a71;line-height:1.7;font-size:17px;margin:0">The V1000 leads. Four smaller machines then cover electric, wheeled, narrow-access and open-acreage needs. The V2000 enters last as a controlled specialist product.</p>
+      </div>
+    </div>
+    <div class="machine-grid" id="machineGrid"></div>
+  </div>
+</section>
+
+<section class="section section-dark" id="selector">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Machine + implement + job selector</div>
+      <h2>Ask how Australians actually buy.</h2>
+      <p>The selector automatically moves through access, terrain, power, job, attachment and duty-cycle questions. It recommends a primary machine, an alternative and an attachment pathway.</p>
+    </div>
+
+    <div class="selector-shell" id="selectorShell">
+      <aside class="selector-side">
+        <div class="step-label" style="color:#fff">Guided recommendation</div>
+        <h3>Find Your TOVISEN</h3>
+        <p>Each answer changes the model score. The questions distinguish firm surfaces from turf, narrow access from open acreage, and low-flow attachments from specialist high-output work.</p>
+        <div class="progress-track"><i id="progressBar"></i></div>
+        <div id="progressText">Question 1 of 8</div>
+        <div class="answer-history" id="answerHistory"></div>
       </aside>
+
+      <section class="selector-panel">
+        <div class="step-label" id="stepLabel">Question 01</div>
+        <div class="question" id="questionText"></div>
+        <div class="options" id="options"></div>
+        <div class="selector-controls">
+          <button class="back-btn" id="backBtn">Back</button>
+          <span class="auto-note">Select once - the quiz advances automatically</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="result-panel" id="resultPanel"></div>
+  </div>
+</section>
+
+<section class="section section-red" id="sequence">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Recommended Australian introduction sequence</div>
+      <h2>Prove first. Broaden second. Specialise last.</h2>
+      <p>This is not a recommendation to stock six models equally. It is a staged market-entry plan designed to minimise complexity while building trust.</p>
+    </div>
+    <div class="launch-grid">
+      <article class="launch-phase primary">
+        <div class="phase-no">01</div>
+        <h3>Launch the V1000</h3>
+        <p>Use one hero machine to build the Australian evidence system.</p>
+        <ul>
+          <li>Controlled specification sheet</li>
+          <li>Track, slope and heat testing</li>
+          <li>Parts and warranty process</li>
+          <li>Operator-led videos and field diary</li>
+          <li>Primary sectors: acreage, fencing, landscaping and contractors</li>
+        </ul>
+      </article>
+      <article class="launch-phase">
+        <div class="phase-no">02</div>
+        <h3>Add the smaller segments</h3>
+        <p>Introduce models by customer need, not simply by size.</p>
+        <ul>
+          <li>S360 Electric - indoor and green niche</li>
+          <li>S370 - wheeled firm-surface work</li>
+          <li>T750 - narrow tracked access</li>
+          <li>V800 - wider open-acreage platform</li>
+          <li>Stock selectively after demand testing</li>
+        </ul>
+      </article>
+      <article class="launch-phase">
+        <div class="phase-no">03</div>
+        <h3>Pilot the V2000</h3>
+        <p>Use selected commercial operators to validate the high-output proposition.</p>
+        <ul>
+          <li>Tree services and vegetation management</li>
+          <li>Hydraulic cooling and attachment matching</li>
+          <li>Transport and operating-category clarity</li>
+          <li>Specialist guarding and operator systems</li>
+          <li>Do not mass launch before field validation</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container inner">
-    <div class="kicker">One machine can change how the work gets done</div>
-    <h2>Real capability.<br><span>A clearer Australian choice.</span></h2>
-    <p>Explore the machine range, match the attachments and register interest in a TOVISEN Australian demonstration.</p>
-    <div class="actions" style="justify-content:center">
-      <button class="btn btn-red" data-scroll="#finder">Find my machine</button>
-      <button class="btn btn-light" data-scroll="#build">Build my package</button>
+<section class="section section-dark" id="hydraulics">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Hydraulics centre</div>
+      <h2>Match the attachment - not the marketing label.</h2>
+      <p>“Standard flow” and “high flow” vary between manufacturers. The correct match depends on verified continuous flow, pressure, cooling, case drain, return back-pressure, attachment weight and coupler configuration.</p>
+    </div>
+    <div class="hydro-grid" id="hydroGrid"></div>
+    <div class="matrix-disclaimer">
+      <b>Important:</b> the attachment products and specifications below come from TOVISEN's official-facing attachment catalogue.
+      The green, amber and red machine-fit assessments are preliminary Australian-market recommendations - they are not yet a
+      manufacturer-certified compatibility chart. Final fitment requires confirmed machine flow, pressure, cooling, coupler,
+      attachment mass and stability data.
+    </div>
+    <div class="matrix-wrap">
+      <table>
+        <thead><tr><th>Attachment</th><th>S360</th><th>S370</th><th>T750</th><th>V800</th><th>V1000</th><th>V2000</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><button class="attachment-link" data-attachment="bucket4in1"><span>4-in-1 bucket<small>Official TOVISEN product - open data sheet</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="maybe">Confirm configuration</td><td class="yes">Strong fit</td><td class="yes">Strong fit</td><td class="yes">Strong fit</td><td class="yes">Strong fit</td><td class="yes">Strong fit</td>
+          </tr>
+          <tr>
+            <td><button class="attachment-link" data-attachment="forks"><span>Side-shift pallet forks<small>Official TOVISEN product - open data sheet</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="maybe">Load-limited</td><td class="yes">Suitable</td><td class="yes">Suitable</td><td class="yes">Suitable</td><td class="yes">Strong fit</td><td class="yes">Strong fit</td>
+          </tr>
+          <tr>
+            <td><button class="attachment-link" data-attachment="auger"><span>Hydraulic auger<small>Official TOVISEN product - open data sheet</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="maybe">Flow needed</td><td class="maybe">Flow needed</td><td class="yes">Claimed compatible</td><td class="maybe">Verify flow</td><td class="yes">Strong target use</td><td class="yes">Likely fit</td>
+          </tr>
+          <tr>
+            <td><button class="attachment-link" data-attachment="trencher"><span>Hydraulic trencher<small>Official TOVISEN product - open data sheet</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="no">Not established</td><td class="maybe">Verify flow</td><td class="maybe">Attachment-specific</td><td class="maybe">Verify flow</td><td class="yes">Strong target use</td><td class="yes">Likely fit</td>
+          </tr>
+          <tr>
+            <td><button class="attachment-link" data-attachment="stumpgrinder"><span>Stump grinder<small>Official TOVISEN product - open data sheet</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="no">Not established</td><td class="no">Not established</td><td class="maybe">Not yet proven</td><td class="maybe">Not yet proven</td><td class="yes">Selected models - verify</td><td class="yes">Likely broader choice</td>
+          </tr>
+          <tr>
+            <td><button class="attachment-link" data-attachment="brushmulcher"><span>Brush / light forestry mulcher<small>Official TOVISEN 40-60 L/min product</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="no">Not established</td><td class="no">Not established</td><td class="no">Not established</td><td class="maybe">Not yet proven</td><td class="yes">Hydraulic range overlaps - full fit still verify</td><td class="yes">Likely fit - verify output</td>
+          </tr>
+          <tr>
+            <td><button class="attachment-link" data-attachment="highoutput"><span>High-output forestry mulcher<small>No separate TOVISEN product sheet identified</small></span><span class="arrow" aria-hidden="true">→</span></button></td>
+            <td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="no">Not current positioning</td><td class="no">Not current V1000 positioning</td><td class="maybe">Future pilot - manufacturer proposal required</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
+
+<section class="section" id="evidence">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Evidence system</div>
+      <h2>Use the data gaps to demonstrate credibility.</h2>
+      <p>The concept deliberately distinguishes a published specification, a manufacturer claim and information still requiring an Australian-controlled test.</p>
+    </div>
+    <div class="evidence-grid">
+      <div class="comparison-card">
+        <img src="assets/v1000-comparison.jpg" alt="TOVISEN V1000 comparison chart">
+      </div>
+      <div class="note-stack">
+        <article class="note-card">
+          <h3>Capacity language must be controlled</h3>
+          <p>The comparison chart labels 1,433 lb as rated operating capacity. TOVISEN’s official-facing material describes 650 kg as maximum lifting force. These are not interchangeable.</p>
+          <div class="status-row"><span class="status status-claim">Manufacturer claim</span><span class="status status-check">ROC test required</span></div>
+        </article>
+        <article class="note-card">
+          <h3>Tipping load and ROC</h3>
+          <p>Industry ROC is normally derived from a stability test and then reduced by a safety factor. The exact test configuration must state attachment, load centre, boom position, fluids, operator mass and counterweights.</p>
+          <div class="status-row"><span class="status status-check">Test method</span><span class="status status-check">Load centre</span><span class="status status-check">Configuration</span></div>
+        </article>
+        <article class="note-card">
+          <h3>Australian promise</h3>
+          <p>The commercial offer is not simply a loader. It is one specification, one parts pathway, one warranty process and visible proof in Australian conditions.</p>
+          <div class="status-row"><span class="status status-published">Clear product identity</span><span class="status status-check">Local support plan</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="strategy-transition" id="strategy">
+  <div class="container">
+    <div class="kicker">Part two - behind the customer experience</div>
+    <h2>You have seen the product journey.<br><span>Now here is why Australia needs it.</span></h2>
+    <p>Everything in the interactive product experience is a direct response to the market barriers identified in the Australian review: trust, specification control, owner proof, local support and product differentiation.</p>
+    <button class="btn btn-red" data-scroll="#australian-opportunity">Enter the market strategy</button>
+  </div>
+</section>
+
+<section class="strategy-section strategy-paper" id="australian-opportunity">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">The Australian opportunity</div>
+      <h2>The machine may be capable. The market system is not yet complete.</h2>
+      <p>Australian buyers are practical. They want value, but they do not want a machine that feels cheap, unsupported or risky. The winning proposition is industrial-grade capability at a sensible price, supported by proof.</p>
+    </div>
+    <div class="opportunity-grid">
+      <article class="opportunity-card"><div class="icon-no">01</div><h3>Acreage owners</h3><p><b>Pain:</b> fencing, drainage, materials and property cleanup require too much manual labour.<br><br><b>Proof required:</b> attachment simplicity, slope guidance, serviceability and parts access.</p></article>
+      <article class="opportunity-card"><div class="icon-no">02</div><h3>Landscapers</h3><p><b>Pain:</b> narrow access and repeated material movement.<br><br><b>Proof required:</b> gate access, turf impact, cycle times, hydraulic performance and local service.</p></article>
+      <article class="opportunity-card"><div class="icon-no">03</div><h3>Fencing contractors</h3><p><b>Pain:</b> posts, strainers, pallets, trenching and rough ground.<br><br><b>Proof required:</b> auger torque, auxiliary flow, track retention and transport practicality.</p></article>
+      <article class="opportunity-card"><div class="icon-no">04</div><h3>Tree services</h3><p><b>Pain:</b> logs, brush, stump work and constrained access.<br><br><b>Proof required:</b> hydraulic cooling, guarding, stability and attachment matching.</p></article>
+      <article class="opportunity-card"><div class="icon-no">05</div><h3>Small contractors</h3><p><b>Pain:</b> loader productivity without the cost or bulk of a full-size machine.<br><br><b>Proof required:</b> warranty, ownership cost, finance, compliance and resale confidence.</p></article>
+      <article class="opportunity-card"><div class="icon-no">06</div><h3>Rental fleets</h3><p><b>Pain:</b> versatile machines must survive inexperienced users and fast turnarounds.<br><br><b>Proof required:</b> damage tolerance, parts, training, standardisation and residual value.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-red">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">Australian buyer psychology</div>
+      <h2>Do not sell cheap. Sell confidence and value.</h2>
+      <p>The customer should feel they are buying a serious workhorse - not gambling on a bargain.</p>
+    </div>
+    <div class="buyer-split">
+      <article class="buyer-column avoid">
+        <h3>What creates resistance</h3>
+        <ul>
+          <li>Unsupported “best machine” or “number one” claims</li>
+          <li>Different specifications on different websites</li>
+          <li>Factory-only content with little owner voice</li>
+          <li>Unclear parts, warranty and service responsibility</li>
+          <li>A generic model identity that looks like every other V1000</li>
+          <li>Failure-focused content without reliability evidence</li>
+        </ul>
+      </article>
+      <article class="buyer-column want">
+        <h3>What creates confidence</h3>
+        <ul>
+          <li>One controlled Australian specification sheet</li>
+          <li>Measured work in heat, dust, slopes and rough ground</li>
+          <li>Calm, independent operator feedback</li>
+          <li>Visible local parts and a written warranty process</li>
+          <li>Clear product differentiation and a memorable identity</li>
+          <li>Transparent positives, limitations and ownership experience</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-ink" id="barriers">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">Correctable market barriers</div>
+      <h2>Six issues to solve before scale.</h2>
+      <p>Click each card. These are not reasons to reject TOVISEN - they are the work programme required to turn machine potential into Australian market credibility.</p>
+    </div>
+    <div class="risk-grid" id="riskGrid">
+      <article class="risk-card active" data-risk="visibility"><div class="risk-index">Barrier 01</div><h3>Limited independent visibility</h3><p>Low owner discussion and limited Australian proof reduce buyer confidence before specifications are even compared.</p></article>
+      <article class="risk-card" data-risk="specs"><div class="risk-index">Barrier 02</div><h3>Specification inconsistency</h3><p>Weight, speed, capacity and bucket figures vary across brochures, websites and marketplace listings.</p></article>
+      <article class="risk-card" data-risk="identity"><div class="risk-index">Barrier 03</div><h3>V1000 identity confusion</h3><p>The model name is already strongly associated with Derette and other similar machines.</p></article>
+      <article class="risk-card" data-risk="support"><div class="risk-index">Barrier 04</div><h3>Support uncertainty</h3><p>Buyers cannot yet see one clear Australian warranty, parts and machine-down response pathway.</p></article>
+      <article class="risk-card" data-risk="proof"><div class="risk-index">Barrier 05</div><h3>Insufficient real-use proof</h3><p>Feature videos do not yet answer enough buyer questions about heat, slopes, tracks, loads and long work sessions.</p></article>
+      <article class="risk-card" data-risk="company"><div class="risk-index">Barrier 06</div><h3>Corporate and product clarity</h3><p>The relationships between TOVISEN, E-ZAN and Jining Yizhan should be explained clearly to partners.</p></article>
+    </div>
+    <div class="risk-detail" id="riskDetail">
+      <div><div class="kicker">Selected barrier</div><h3 id="riskTitle">Limited independent visibility</h3></div>
+      <div><p id="riskText">Australian machinery buyers rely heavily on owner comments, Facebook groups, YouTube reviews and peer discussion. Factory-led visibility alone is not enough.</p><ul id="riskActions"><li>Create an Australian operator channel.</li><li>Document delivery, 10 hours, 50 hours and six months.</li><li>Build one owner community rather than fragmented accounts.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-paper" id="naming-lab">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">The V1000 identity problem</div>
+      <h2>If the machine is different, the name should not make it look the same.</h2>
+      <p>The naming issue is not cosmetic. A buyer may dismiss the machine before researching it because “V1000” already feels generic and is strongly associated with competing products.</p>
+    </div>
+    <div class="name-lab">
+      <div class="name-controls">
+        <h3>Interactive naming laboratory</h3>
+        <p>Select a concept name to see how the same machine feels when it has a more distinctive Australian-facing identity.</p>
+        <div class="name-buttons" id="nameButtons">
+          <button class="name-choice" data-name="TOVISEN V1000" data-tag="Current generic identity" data-copy="Technically descriptive, but easily confused with Derette and other V1000-labelled machines." data-scores="Low differentiation|Low search ownership|High confusion risk">TOVISEN V1000 <span>Current</span></button>
+          <button class="name-choice active" data-name="TOVISEN WORKPRO 1000" data-tag="Purpose-led Australian concept" data-copy="Immediately communicates a practical industrial workhorse for acreage, fencing, landscaping and contractor work." data-scores="Clear purpose|Strong workhorse signal|Easy to understand">TOVISEN WorkPro 1000 <span>Purpose-led</span></button>
+          <button class="name-choice" data-name="TOVISEN VX1100" data-tag="Premium proprietary concept" data-copy="Creates stronger separation from generic V1000 naming and feels like a distinct engineered product family." data-scores="High differentiation|Premium tone|Expandable range">TOVISEN VX1100 <span>Premium</span></button>
+          <button class="name-choice" data-name="TOVISEN 1100X" data-tag="Maximum differentiation concept" data-copy="A compact, memorable identity that separates the machine from the crowded V1000 category." data-scores="High recall|Low confusion|Strong digital search potential">TOVISEN 1100X <span>Distinctive</span></button>
+          <button class="name-choice" data-name="TOVISEN INDUSTRIAL 1000" data-tag="Capability-led concept" data-copy="Directly reinforces the desired position: industrial-grade capability at a sensible price." data-scores="Industrial signal|Clear market position|Longer name">TOVISEN Industrial 1000 <span>Capability-led</span></button>
+        </div>
+        <div class="identity-problem"><b>Real buyer insight:</b> the original Australian review records that the TOVISEN V1000 was initially assumed to be similar to the Derette V1000. That is a lost-attention problem before the sales conversation even begins.</div>
+      </div>
+      <div class="name-preview">
+        <img src="https://e-zan.com/zb_users/upload/2025/07/202507251753431971282620.jpg" alt="TOVISEN V1000 naming concept">
+        <div class="name-preview-content">
+          <small id="nameTag">Purpose-led Australian concept</small>
+          <h3 id="namePreview">TOVISEN WORKPRO 1000</h3>
+          <p id="nameCopy">Immediately communicates a practical industrial workhorse for acreage, fencing, landscaping and contractor work.</p>
+          <div class="name-score" id="nameScores"><span>Clear purpose</span><span>Strong workhorse signal</span><span>Easy to understand</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-paper" id="spec-truth">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">Specification truth</div>
+      <h2>One machine should not have several public identities.</h2>
+      <p>The purpose of this comparison is not to criticise individual numbers. It is to demonstrate why Australia needs one authoritative master specification and one recognised test method.</p>
+    </div>
+    <div class="truth-grid">
+      <article class="truth-card"><h3>Operating weight</h3><div class="truth-source"><div><b>Uploaded comparison</b>4,192 lb</div><div><b>Brochure shipping figure</b>4,162 lb</div><div><b>Official-facing web</b>1,658 kg / 3,655 lb</div><div><b>Marketplace listing</b>1,317 kg reported elsewhere</div></div></article>
+      <article class="truth-card"><h3>Capacity language</h3><div class="truth-source"><div><b>Comparison graphic</b>1,433 lb “rated operating capacity”</div><div><b>Brochure</b>1,012 lb lifting capacity</div><div><b>Brochure</b>1,100 lb standard lifting capacity</div><div><b>Official-facing web</b>650 kg maximum lifting force</div></div></article>
+      <article class="truth-card"><h3>Travel speed</h3><div class="truth-source"><div><b>Uploaded brochure</b>6 km/h</div><div><b>Official-facing web</b>4.5 km/h</div><div><b>Other listings</b>6 km/h</div><div><b>Commercial impact</b>A 33% difference is material</div></div></article>
+      <article class="truth-card"><h3>Engine configuration</h3><div class="truth-source"><div><b>Comparison graphic</b>Kubota D1105, 25 hp</div><div><b>Official-facing web</b>Kubota D1105, 18.5 kW</div><div><b>Alternative configuration</b>Yanmar 3TNV80F, 17.8 kW</div><div><b>Australian requirement</b>Freeze the exact market configuration</div></div></article>
+    </div>
+    <div class="truth-conclusion">One machine. One specification. One test method. One support promise.</div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-ink" id="proof-system">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">Real-use proof system</div>
+      <h2>The strongest marketing asset is not another brochure.</h2>
+      <p>It is calm, measured, operator-led evidence showing the machine completing Australian jobs under Australian conditions.</p>
+    </div>
+    <div class="proof-grid">
+      <article class="proof-card"><div class="proof-no">01</div><h3>Capacity truth test</h3><p>Explain rated operating capacity, tipping load, maximum lift, load centre and attachment configuration.</p></article>
+      <article class="proof-card"><div class="proof-no">02</div><h3>Track endurance</h3><p>Eight hours of rough ground, loaded turns, side-slope work and documented tension checks.</p></article>
+      <article class="proof-card"><div class="proof-no">03</div><h3>Hydraulic performance</h3><p>Verify auxiliary flow, pressure and oil temperature at operating temperature - not only when cold.</p></article>
+      <article class="proof-card"><div class="proof-no">04</div><h3>Heat and dust</h3><p>Complete a full Australian working day while recording coolant and hydraulic temperatures.</p></article>
+      <article class="proof-card"><div class="proof-no">05</div><h3>Local service test</h3><p>Have an ordinary Australian diesel or hydraulic workshop complete the 50-hour service.</p></article>
+      <article class="proof-card"><div class="proof-no">06</div><h3>Owner chronology</h3><p>Delivery day, first 10 hours, 50 hours, six months, repair experience and honest ownership cost.</p></article>
+    </div>
+    <div class="social-transform">
+      <article class="social-box current">
+        <h3>Current content pattern</h3>
+        <ul>
+          <li>Routine factory clips</li>
+          <li>Generic titles and feature descriptions</li>
+          <li>Multiple accounts splitting authority</li>
+          <li>Claims without test conditions</li>
+          <li>Little visible owner chronology</li>
+        </ul>
+      </article>
+      <div class="transform-arrow">→</div>
+      <article class="social-box">
+        <h3>Australian proof content</h3>
+        <ul>
+          <li>One buyer question</li>
+          <li>One controlled test</li>
+          <li>One measurable result</li>
+          <li>One independent operator voice</li>
+          <li>One clear next action</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-red" id="support-pathway">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">The Australian ownership promise</div>
+      <h2>Capability is only half the machine.</h2>
+      <p>A good machine with unclear support will struggle. A good machine with visible parts, warranty clarity and local response standards can build trust.</p>
+    </div>
+    <div class="support-journey">
+      <article class="support-step"><div class="step-no">01</div><h3>Before sale</h3><ul><li>Controlled specifications</li><li>Attachment matching</li><li>Demonstration</li><li>Transparent landed price</li></ul></article>
+      <article class="support-step"><div class="step-no">02</div><h3>Delivery</h3><ul><li>Pre-delivery inspection</li><li>Operator handover</li><li>Australian manuals</li><li>Initial fast-moving parts kit</li></ul></article>
+      <article class="support-step"><div class="step-no">03</div><h3>During ownership</h3><ul><li>Named service contact</li><li>Written warranty process</li><li>Labour reimbursement rule</li><li>Machine-down response target</li></ul></article>
+      <article class="support-step"><div class="step-no">04</div><h3>Long term</h3><ul><li>Scheduled service programme</li><li>Owner community</li><li>Parts availability commitment</li><li>Resale and trade-in confidence</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="strategy-section strategy-paper" id="validation-plan">
+  <div class="container">
+    <div class="strategy-head">
+      <div class="kicker">Recommended 90-day validation</div>
+      <h2>A disciplined path from interest to decision.</h2>
+      <p>Each phase has a decision gate. The objective is to reduce uncertainty before committing to a broad Australian launch.</p>
+    </div>
+    <div class="roadmap">
+      <article class="roadmap-step highlight"><div class="days">Step 1</div><h3>Document truth</h3><p>Corporate records, master specifications, bill of materials, certification, warranty, parts catalogue, pricing and factory QA evidence.</p><div class="decision-gate">Gate: proceed only if contradictions can be reconciled in writing.</div></article>
+      <article class="roadmap-step"><div class="days">Step 2</div><h3>Machine proof</h3><p>Witnessed tipping and lift tests, hydraulic flow and pressure, thermal test, track and slope test and service-access review.</p><div class="decision-gate">Gate: proceed only if claims are repeatable and safe.</div></article>
+      <article class="roadmap-step"><div class="days">Step 3</div><h3>Australian pilot</h3><p>Import controlled demonstration units, conduct full PDI, independent workshop inspection and selected operator trials.</p><div class="decision-gate">Gate: proceed only if parts, safety and usability are acceptable.</div></article>
+      <article class="roadmap-step"><div class="days">Step 4</div><h3>Market proof</h3><p>Publish honest content, collect qualified leads, test pricing, confirm insurance and service costs and model landed economics.</p><div class="decision-gate">Gate: choose distributor launch, limited dealership or no-go.</div></article>
+    </div>
+
+    <div class="strategy-head" style="margin-top:70px">
+      <div class="kicker">Evidence standard for the discussion</div>
+      <h2>What a strong answer looks like.</h2>
+    </div>
+    <div class="evidence-standard">
+      <table>
+        <thead><tr><th>Topic</th><th>Insufficient answer</th><th>Strong evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Capacity</td><td>“It can lift 650 kg easily.”</td><td>Tipping-load and ROC test with load centre, attachment and configuration.</td></tr>
+          <tr><td>Components</td><td>“Italian hydraulics.”</td><td>Bill of materials by serial number and exact pump, motor, valve and filter models.</td></tr>
+          <tr><td>Warranty</td><td>“We send free parts.”</td><td>Written coverage, exclusions, labour rate, freight responsibility and response workflow.</td></tr>
+          <tr><td>Track reliability</td><td>Only a track reinstallation video.</td><td>Failure data, tension procedure, anti-derail design explanation and endurance test.</td></tr>
+          <tr><td>Australia support</td><td>“A local mechanic can fix it.”</td><td>Named trained service partners, manuals, diagnostics and stocked parts.</td></tr>
+          <tr><td>Company history</td><td>“Our team has 20 years of experience.”</td><td>Corporate timeline, legal entities, ownership, licences and documented milestones.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="strategy-footer-note">Research snapshot: 10 July 2026. Public social metrics and marketplace listings should be refreshed with TOVISEN administrator analytics and primary manufacturer documents.</div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container closing-inner">
+    <div class="kicker">The proposition</div>
+    <h2>TOVISEN does not need louder advertising.<br><span>It needs a clearer identity, stronger evidence and an Australian system around the machine.</span></h2>
+    <div class="flow">
+      <span>Product clarity</span><b>→</b>
+      <span>Verified data</span><b>→</b>
+      <span>Real work</span><b>→</b>
+      <span>Local parts</span><b>→</b>
+      <span>Warranty confidence</span><b>→</b>
+      <span>Owner community</span>
+    </div>
+    <div class="final-line">From factory visibility to Australian market credibility.</div>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <b>Australian launch concept demonstration.</b> Final models, specifications, attachment compatibility, local support, warranty, pricing and availability would be confirmed before retail release. Published figures shown in the data cards are based on current official-facing TOVISEN information and remain subject to exact configuration.
+  <b>Concept demonstration only.</b> Model positioning, scores and attachment recommendations are strategic concepts. Published figures remain subject to manufacturer verification, exact Australian configuration, recognised test methods and applicable Australian requirements.
+  <div class="source-links">
+    <a href="https://e-zan.com/skid-steer-loaders/mini_steer_loader_S360/" target="_blank" rel="noopener">S360 official-facing page</a>
+    <a href="https://e-zan.com/skid-steer-loaders/s370-skid-steer-loader/" target="_blank" rel="noopener">S370 page</a>
+    <a href="https://e-zan.com/skid-steer-loaders/mini_steer_loader_T750/" target="_blank" rel="noopener">T750 page</a>
+    <a href="https://e-zan.com/skid-steer-loaders/mini_steer_loader_V800/" target="_blank" rel="noopener">V800 page</a>
+    <a href="https://e-zan.com/skid-steer-loaders/v1000-skid-steer-loader/" target="_blank" rel="noopener">V1000 page</a>
+  </div>
 </footer>
 
 <div class="panel-backdrop" id="panelBackdrop"></div>
-<aside class="detail-panel" id="detailPanel" aria-hidden="true">
-  <button class="panel-close" id="panelClose" aria-label="Close panel">×</button>
+<aside class="spec-panel" id="specPanel" aria-hidden="true">
+  <button class="panel-close" id="panelClose" aria-label="Close specification panel">×</button>
   <div id="panelInner"></div>
 </aside>
-
-<div class="video-modal" id="videoModal" aria-hidden="true">
-  <div class="video-shell" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
-    <div class="video-top">
-      <div><small id="videoLabel">Working demonstration</small><h3 id="videoTitle">TOVISEN video</h3></div>
-      <button class="video-close" id="videoClose" aria-label="Close video">×</button>
-    </div>
-    <div class="video-frame-wrap">
-      <iframe id="videoFrame" title="TOVISEN working demonstration" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <div class="video-local-fallback" id="videoLocalFallback">
-        <img id="videoPoster" alt="YouTube video preview">
-        <div class="video-local-shade"></div>
-        <div class="video-local-copy">
-          <div class="local-play">▶</div>
-          <h4>Play this demonstration on YouTube</h4>
-          <p>Local HTML files do not provide the HTTP referrer now required by YouTube embeds.</p>
-          <a class="btn btn-red" id="localYouTubeButton" target="_blank" rel="noopener">Open video</a>
-        </div>
-      </div>
-    </div>
-    <div class="local-mode-note" id="localModeNote"><b>Local presentation mode:</b> YouTube playback opens in a new tab. When this page is hosted on GitHub Pages or another web server, videos play inside this overlay.</div>
-    <div class="video-info">
-      <div class="video-copy">
-        <p id="videoDescription"></p>
-        <div class="video-actions">
-          <a class="btn btn-red" id="youtubeFallback" target="_blank" rel="noopener">Open on YouTube</a>
-          <button class="btn btn-light" id="videoBack">Return to data sheet</button>
-        </div>
-        <div class="video-source-note">Video streams from YouTube and requires an internet connection. If embedding is restricted, use the Open on YouTube button.</div>
-      </div>
-      <aside class="video-observe">
-        <h4>What to look for</h4>
-        <ul id="videoObserve"></ul>
-      </aside>
-    </div>
-  </div>
-</div>
 
 <script>
 (function(){
 "use strict";
 
-var machines={
-  s360:{name:"S360 Electric",role:"Electric compact",tag:"Clean, quiet and compact",image:"https://e-zan.com/zb_users/upload/2024/11/202411251732533684421102.jpg",desc:"A compact wheeled loader with an electric option for facilities, warehouses, nurseries, stables and noise-sensitive sites.",quick:[["980 mm","Width"],["900 kg","Weight"],["0.12 m³","Bucket"]],specs:[["Power options","Diesel, petrol and electric"],["Electric system","72 V, up to 9.9 kW"],["Operating weight","900 kg"],["Rated load claim","300 kg"],["Bucket capacity","0.12 m³"],["Travel speed","0-6 km/h"],["Battery capacity and runtime","Confirmation required"]],uses:["Warehouses and factories","Nurseries and equine facilities","Councils and facility management","Noise-sensitive urban work"],note:"Battery chemistry, kWh capacity, runtime under hydraulic load, charging and battery warranty would need confirmation for Australia."},
-  s370:{name:"S370",role:"Wheeled firm-surface",tag:"Simple wheeled productivity",image:"https://e-zan.com/zb_users/upload/2025/07/202507311753953255476184.jpg",desc:"A wheeled zero-turn loader for paved yards, sheds, warehouses, barns, nurseries and conventional material handling.",quick:[["1,070 mm","Width"],["1,020 kg","Weight"],["0.27 m³","Bucket"]],specs:[["Engine","192F-5 diesel"],["Operating weight","1,020 kg"],["Rated load claim","350 kg"],["Bucket capacity","0.27 m³"],["Maximum dump height","1,935 mm"],["Travel speed","0-5.5 km/h"],["Auxiliary flow and pressure","Confirmation required"]],uses:["Concrete and asphalt yards","Sheds and warehouses","Barns and feed areas","Nurseries and garden centres"],note:"The S370 is the non-track choice. Turf impact still depends on soil condition, tyre choice and turning technique."},
-  t750:{name:"T750 Access",role:"Narrow tracked access",tag:"Tracked access below one metre",image:"https://e-zan.com/zb_users/upload/2024/11/202411271732771846802804.jpg",desc:"A narrow tracked model for residential landscaping, paths, orchards, smaller farms and access-sensitive jobs.",quick:[["970 mm","Width"],["20 hp","Published"],["400 kg*","Capacity claim"]],specs:[["Engine","Yanmar 3TNV80"],["Power","Up to 20 hp"],["Overall width","970 mm"],["Maximum operating-capacity claim","400 kg"],["Maximum dump height","1,700 mm"],["Fuel tank","30 L"],["Operating weight and hydraulic output","Confirmation required"]],uses:["Restricted landscaping sites","Orchards and narrow rows","Smaller acreage jobs","Soft or uneven ground"],note:"Its role is narrow access and lower-duty tracked work. The 400 kg figure requires definition under a recognised capacity method."},
-  v800:{name:"V800 Acreage",role:"Wider tracked acreage",tag:"Open property and rough ground",image:"https://e-zan.com/zb_users/upload/2025/12/202512071765153732426891.jpg",desc:"A wider tracked D1105 platform for farms, open acreage, rough ground and sites where narrow-gate access is not the priority.",quick:[["1,270 mm","Width"],["1,635 kg","Weight"],["240 mm","Clearance"]],specs:[["Engine","Kubota D1105"],["Power","18.5 kW"],["Operating weight","1,635 kg"],["Bucket capacity","0.15 m³"],["Overall width","1,270 mm"],["Ground clearance","240 mm"],["ROC, tipping load and hydraulics","Confirmation required"]],uses:["Open acreage and farms","Mud and uneven ground","Rural material handling","Larger landscaping sites"],note:"The Australian case depends on price, ground pressure, track durability, stability and a clear difference from the narrower V1000."},
-  v1000:{name:"V1000",role:"Australian workhorse",tag:"The proposed flagship",image:"https://e-zan.com/zb_users/upload/2025/07/202507251753431971282620.jpg",desc:"A compact tracked vertical-lift platform for acreage, fencing, landscaping, property maintenance and daily contractor work.",quick:[["960 mm","Width"],["18.5 kW","Kubota"],["40 L","Fuel"]],specs:[["Engine options","Kubota D1105 or Yanmar 3TNV80F"],["Published power","18.5 kW / 17.8 kW"],["Operating weight","1,658 kg"],["Overall width","960 mm"],["Lift path","Vertical"],["Fuel tank","40 L"],["Maximum lifting-force claim","650 kg - not yet a verified ROC"],["Auxiliary flow and pressure","Exact Australian figure to be confirmed"]],uses:["Acreage and rural property","Fencing contractors","Landscaping and hardscaping","Small builders and contractors"],note:"This is the proposed first Australian model. Rated operating capacity, tipping load, hydraulic output and exact attachment compatibility should be verified before final retail claims."},
-  v2000:{name:"V2000",role:"Specialist high-output",tag:"Commercial pilot machine",image:"https://img.youtube.com/vi/XOQ7BIV1wp4/hqdefault.jpg",desc:"A high-output tracked stand-on machine for selected tree, vegetation, heavy grapple and specialist contractor applications.",quick:[["75 hp*","Engine claim"],["~2.8 t","Published"],["1.5 t*","Load claim"]],specs:[["Engine","Cummins QSF2.8 turbo diesel"],["Published power","Approximately 75 hp"],["Published weight","Approximately 2,822 kg"],["Published width","Approximately 1,420 mm"],["Maximum / nominal load claim","1.5 tonnes"],["Rated operating capacity","Not established"],["Auxiliary flow, pressure and cooling","Confirmation required"]],uses:["Tree services","Vegetation management","Rural contractors","Heavy grapple and specialist work"],note:"The V2000 should enter Australia through a controlled commercial pilot after hydraulic output, transport, attachment power and operating systems are validated."}
-};
-
-var attachments={
-  bucket:{name:"4-in-1 Bucket",image:"https://e-zan.com/zb_users/upload/2026/01/202601251769407504137211.jpg",desc:"Loading, dozing, grading, spreading and grappling in one hydraulically operated bucket.",specs:[["Overall dimensions","1000 × 540 × 600 mm"],["Unit weight","113.6 kg"],["Bucket volume","0.32 m³"],["Control","Dual hydraulic cylinders"],["Mounting","Universal quick attach"]],note:"Machine safe load remains limited by the carrier's verified ROC, tipping load and attachment configuration."},
-  forks:{name:"Side-Shift Pallet Forks",image:"https://e-zan.com/zb_users/upload/2026/01/202601251769411496170166.jpg",desc:"Forged adjustable pallet forks with manual or hydraulic side-shift options.",specs:[["Advertised fork capacity","2,000 kg structural claim"],["Fork dimensions","1070 × 100 × 45 mm"],["Fork weight","180 kg per pair"],["Side shift","Manual or hydraulic"],["Mounting","Universal quick attach"]],note:"The fork structural rating is not the loader's lift capacity. Safe load depends on ROC, tipping load, load centre and height."},
-  auger:{name:"Hydraulic Auger",image:"https://e-zan.com/zb_users/upload/2026/01/202601261769420274512214.jpg",desc:"Post-hole auger with several bit diameters for fencing, landscaping and property work.",specs:[["Bit sizes","150, 200, 250 and 300 mm"],["Bit length","1,000 mm"],["Drive","Hydraulic motor"],["Mounting","Universal quick attach"],["Required flow and pressure","Confirmation required"]],note:"Final fit depends on verified machine flow, pressure, drive torque and coupler configuration."},
-  trencher:{name:"Hydraulic Trencher",image:"https://e-zan.com/zb_users/upload/2026/01/202601251769413963222729.jpg",desc:"Compact utility trencher for drainage, irrigation, cable and pipe installation.",specs:[["Overall dimensions","1910 × 800 × 625 mm"],["Unit weight","178 kg"],["Maximum depth","800 mm"],["Cut width","155 mm"],["Required flow and pressure","Confirmation required"]],note:"Attachment mass, chain load and hydraulic requirements must be checked against the exact carrier."},
-  stump:{name:"Stump Grinder",image:"https://e-zan.com/zb_users/upload/2026/01/202601261769484203512044.jpg",desc:"Compact hydraulic stump grinder for property, landscaping and vegetation work.",specs:[["Overall dimensions","988 × 620 × 500 mm"],["Unit weight","140 kg"],["Maximum cutting depth","300 mm"],["Cutter disc","400 mm"],["System pressure","16 MPa"],["Required flow","Confirmation required"]],note:"Selected low-flow configurations may suit the V1000, subject to cooling, case drain, weight and full hydraulic matching."},
-  mulcher:{name:"Forestry Brush Mulcher",image:"https://e-zan.com/zb_users/upload/2026/01/202601261769493986264938.jpg",desc:"A compact 930 mm brush mulcher for dense vegetation and small trees.",specs:[["Working width","930 mm"],["Maximum cutting diameter","100 mm"],["Required flow","40-60 L/min"],["Working pressure","14-21 MPa"],["Unit weight","320 kg"],["Blade options","Flail or fixed teeth"]],note:"The published hydraulic range may overlap V1000 public claims, but attachment weight, cooling, case drain, stability and debris protection still require confirmation."}
-};
-
-
-var videoLibrary={
-  machine:{
-    s360:{
-      id:"8GvjTOB0Ux8",
-      title:"S360 Product Features and Operation",
-      label:"Machine overview",
-      description:"A manufacturer product introduction showing the compact S360 platform, its operating layout and working movement.",
-      observe:["Overall compact dimensions and visibility","Wheeled manoeuvrability on firm surfaces","Operator controls and basic working movement"]
-    },
-    s370:{
-      id:"sgXYahkF0Ss",
-      title:"S370 Product Introduction",
-      label:"Machine overview",
-      description:"A TOVISEN introduction to the S370 wheeled skid steer, focusing on its compact structure and operating characteristics.",
-      observe:["Turning behaviour on firm ground","Bucket position and operator visibility","How the wheeled platform differs from tracked models"]
-    },
-    t750:{
-      id:"tHc0x5R6zmg",
-      title:"T750 Auger Working Demonstration",
-      label:"Machine and attachment demonstration",
-      description:"The T750 is shown operating a hydraulic auger, demonstrating the narrow tracked machine in a practical property-work application.",
-      observe:["Tracked movement and access footprint","Auger stability and boom control","Hydraulic response during drilling"]
-    },
-    v800:{
-      id:"-ZPJOR4rCiw",
-      title:"V800 and V1000 Working Comparison",
-      label:"Machine comparison",
-      description:"A working comparison of the V800 and V1000 using an angle sweeper attachment, helping customers see the difference between the wider acreage platform and the narrower workhorse.",
-      observe:["Machine footprint and turning room","Attachment response on each carrier","Operator position and visibility"]
-    },
-    v1000:{
-      id:"m9SfkMM_4XA",
-      title:"V1000 - One Machine, Multiple Attachments",
-      label:"Flagship versatility demonstration",
-      description:"The V1000 is demonstrated with multiple attachments for landscaping, farming, property maintenance and land-clearing applications.",
-      observe:["Attachment change and practical versatility","Machine stability during different tasks","How the compact footprint suits varied jobs"]
-    },
-    v2000:{
-      id:"Aa32Zec8Pco",
-      title:"V2000 Stand-On Loader Demonstration",
-      label:"Specialist machine demonstration",
-      description:"A manufacturer demonstration of the larger V2000 stand-on loader working in demanding conditions.",
-      observe:["Machine scale compared with mini-loader classes","Digging and material-handling behaviour","Why the V2000 requires a specialist Australian pilot"]
-    }
+var machines = {
+  v1000:{
+    name:"V1000", label:"Phase 1 - Australian launch workhorse",
+    role:"The primary machine around which to build trust, parts, warranty, demonstrations and early operator proof.",
+    image:"https://e-zan.com/zb_users/upload/2025/07/202507251753431971282620.jpg",
+    source:"https://e-zan.com/skid-steer-loaders/v1000-skid-steer-loader/",
+    phase:"PHASE 1 - FIRST",
+    quick:[["960 mm","Width"],["18.5 kW","Kubota"],["1,658 kg","Weight"]],
+    desc:"Narrow tracked vertical-lift platform for acreage, fencing, landscaping, material handling and daily contractor work.",
+    australia:["Acreage and rural property","Fencing contractors","Landscaping and hardscaping","Small builders and contractors","Rental and owner-operator trials"],
+    attachments:["Bucket and 4-in-1 bucket","Forks and grapples","Auger and trencher","Selected low-flow stump grinders","Selected low-flow brush or light forestry mulchers"],
+    why:"It has the clearest immediate Australian need state: compact access, familiar engine option, tracked traction, vertical lift and a broad attachment story.",
+    warning:"650 kg is published as maximum lifting force, not yet a verified rated operating capacity. Auxiliary flow, pressure, tipping load, track performance and attachment compatibility must be confirmed for the exact Australian configuration.",
+    specs:[
+      ["Engine options","Kubota D1105 / Yanmar 3TNV80F","published"],
+      ["Rated power","18.5 kW / 17.8 kW","published"],
+      ["Operating weight","1,658 kg","published"],
+      ["Overall width","960 mm","published"],
+      ["Ground clearance","200 mm","published"],
+      ["Fuel tank","40 L","published"],
+      ["Travel speed","0-4.5 km/h","published"],
+      ["Lift path","Vertical","published"],
+      ["Maximum lifting-force claim","650 kg","claim"],
+      ["Rated operating capacity","Not yet established","check"],
+      ["Tipping load","Not yet established","check"],
+      ["Auxiliary flow and pressure","Public material inconsistent - confirm","check"]
+    ]
   },
-  attachment:{
-    bucket:{
-      id:"m9SfkMM_4XA",
-      title:"Bucket and Multi-Attachment Work with the V1000",
-      label:"Related working demonstration",
-      description:"This V1000 versatility video includes practical bucket and multi-attachment work rather than a standalone 4-in-1 bucket test.",
-      observe:["Bucket control and loading movement","Machine balance with the attachment fitted","The benefit of one carrier for several jobs"]
-    },
-    forks:{
-      id:"eAh7t-CABeM",
-      title:"Side-Shift Pallet Forks in Action",
-      label:"Attachment demonstration",
-      description:"A TOVISEN demonstration of side-shift pallet forks, showing installation and working movement.",
-      observe:["Side-shift adjustment","Fork visibility from the operator position","Load centre and keeping loads low while travelling"]
-    },
-    auger:{
-      id:"tHc0x5R6zmg",
-      title:"Hydraulic Auger Working Demonstration",
-      label:"Attachment demonstration",
-      description:"The TOVISEN auger is shown drilling with the T750 tracked loader.",
-      observe:["Auger alignment and boom control","Hydraulic response under load","Ground conditions and spoil removal"]
-    },
-    trencher:{
-      id:"jVs15Qjr-rY",
-      title:"V1000 Trencher Test",
-      label:"Attachment demonstration",
-      description:"A short TOVISEN field test showing the V1000 operating a hydraulic trencher.",
-      observe:["Trench depth and consistency","Machine stability during chain engagement","Forward speed and spoil management"]
-    },
-    stump:{
-      id:"SNOELX1MvN0",
-      title:"TOVISEN Stump Grinder Demonstration",
-      label:"Current manufacturer demonstration",
-      description:"A current TOVISEN stump-grinder demonstration. A future Australian customer site should ultimately replace this with controlled stump removal on a real property.",
-      observe:["Cutter response and hydraulic recovery","Attachment visibility from the operator station","The need for verified guarding, cooling and safe operating procedures"]
-    },
-    mulcher:{
-      id:"_vRjwXOhNwc",
-      title:"TOVISEN Mulcher Working Test",
-      label:"Attachment demonstration",
-      description:"A manufacturer working test of the TOVISEN mulcher clearing vegetation.",
-      observe:["Vegetation size and feed rate","Hydraulic response during continuous cutting","Debris control, cooling and carrier stability"]
-    }
+  s360:{
+    name:"S360 Electric", label:"Phase 2 - Green and indoor niche",
+    role:"A compact zero-emission entry point for indoor, noise-sensitive and environmentally focused customers.",
+    image:"https://e-zan.com/zb_users/upload/2024/11/202411251732533684421102.jpg",
+    source:"https://e-zan.com/skid-steer-loaders/mini_steer_loader_S360/",
+    phase:"PHASE 2 - ELECTRIC",
+    quick:[["980 mm","Width"],["900 kg","Weight"],["0.12 m³","Bucket"]],
+    desc:"Compact wheeled loader with an electric option for warehouses, facilities, nurseries, stables and controlled urban work.",
+    australia:["Warehouses and factories","Equine facilities and nurseries","Councils and facility management","Noise-sensitive urban sites","Customers seeking a lower-emission option"],
+    attachments:["Bucket","Light forks","Light grapple","Sweeper subject to hydraulic match","Other light attachments after flow verification"],
+    why:"It creates a credible green and indoor product story without competing directly with the V1000’s heavy workhorse role.",
+    warning:"Battery chemistry, kWh capacity, runtime under hydraulic load, charging, IP rating, battery warranty and replacement cost are not published. The page lists 17-21 bar system pressure, which requires unit confirmation.",
+    specs:[
+      ["Power options","Diesel / petrol / electric","published"],
+      ["Electric system","72 V, up to 9.9 kW","published"],
+      ["Operating weight","900 kg","published"],
+      ["Rated load claim","300 kg","published"],
+      ["Bucket capacity","0.12 m³","published"],
+      ["Overall dimensions","2070 x 980 x 1300 mm","published"],
+      ["Travel speed","0-6 km/h","published"],
+      ["Battery capacity","Not published","check"],
+      ["Runtime and charging","Not published","check"],
+      ["Auxiliary flow","Not published","check"],
+      ["System pressure","17-21 bar published - verify unit","claim"]
+    ]
+  },
+  s370:{
+    name:"S370", label:"Phase 2 - Wheeled firm-surface machine",
+    role:"The wheeled alternative for customers who do not need tracks and work mainly on firm, level surfaces.",
+    image:"https://e-zan.com/zb_users/upload/2025/07/202507311753953255476184.jpg",
+    source:"https://e-zan.com/skid-steer-loaders/s370-skid-steer-loader/",
+    phase:"PHASE 2 - WHEELED",
+    quick:[["1,070 mm","Width"],["1,020 kg","Weight"],["0.27 m³","Bucket"]],
+    desc:"Wheeled zero-turn loader for sheds, paved yards, warehouses, nurseries and conventional material handling.",
+    australia:["Concrete and asphalt yards","Sheds and warehouses","Barns and feed areas","Nurseries and garden centres","Buyers avoiding track maintenance"],
+    attachments:["General bucket","4-in-1 bucket subject to configuration","Forks","Light grapple","Sweeper after flow confirmation"],
+    why:"It provides a clear non-track choice and a much larger published bucket than the S360.",
+    warning:"Engine output, auxiliary flow, pressure, hinge-pin height and detailed attachment limits are not published. Turf damage will depend heavily on ground condition and turning technique.",
+    specs:[
+      ["Engine","192F-5 EPA / EURO V","published"],
+      ["Operating weight","1,020 kg","published"],
+      ["Rated load claim","350 kg","published"],
+      ["Bucket capacity","0.27 m³","published"],
+      ["Maximum dump height","1,935 mm","published"],
+      ["Overall dimensions","2138 x 1070 x 1508 mm","published"],
+      ["Travel speed","0-5.5 km/h","published"],
+      ["Hydraulic architecture","Dual-pump system","published"],
+      ["Auxiliary flow and pressure","Not published","check"],
+      ["Hinge-pin height","Not published","check"]
+    ]
+  },
+  t750:{
+    name:"T750 Access", label:"Phase 2 - Narrow tracked access",
+    role:"A smaller tracked option for restricted sites where access matters more than open-ground lateral stability.",
+    image:"https://e-zan.com/zb_users/upload/2024/11/202411271732771846802804.jpg",
+    source:"https://e-zan.com/skid-steer-loaders/mini_steer_loader_T750/",
+    phase:"PHASE 2 - ACCESS",
+    quick:[["970 mm","Width"],["20 hp","Published"],["400 kg*","Capacity claim"]],
+    desc:"Narrow tracked machine for residential landscaping, restricted paths, smaller farms, orchards and access-sensitive jobs.",
+    australia:["Restricted landscaping access","Orchards and narrow rows","Smaller acreage jobs","Soft or uneven ground","Buyers below the V1000 price and duty level"],
+    attachments:["Bucket","Forks","Auger","Light landscaping tools","Trencher only after hydraulic matching"],
+    why:"Its reason for existing is access, lower entry cost and a lighter-duty tracked role - not a claim that it is the best side-slope machine.",
+    warning:"Operating weight, full dimensions, auxiliary flow, pressure, track width, ground pressure and recognised ROC are not published. The 400 kg figure is a maximum operating-capacity claim requiring definition.",
+    specs:[
+      ["Engine","Yanmar 3TNV80, 3-cylinder water-cooled","published"],
+      ["Power","Up to 20 hp","published"],
+      ["Optional electric","8 kW, 72 V","published"],
+      ["Overall width","970 mm","published"],
+      ["Track contact length","1,300 mm","published"],
+      ["Maximum operating-capacity claim","400 kg","claim"],
+      ["Dump height","1,700 mm","published"],
+      ["Maximum extension height","2,920 mm","published"],
+      ["Fuel tank","30 L","published"],
+      ["Operating weight","Not published","check"],
+      ["Auxiliary flow and pressure","Not published","check"]
+    ]
+  },
+  v800:{
+    name:"V800 Acreage", label:"Phase 2 - Wider open-property platform",
+    role:"The wider tracked machine for farms, open acreage, rough ground and sites where narrow-gate access is not the priority.",
+    image:"https://e-zan.com/zb_users/upload/2025/12/202512071765153732426891.jpg",
+    source:"https://e-zan.com/skid-steer-loaders/mini_steer_loader_V800/",
+    phase:"PHASE 2 - ACREAGE",
+    quick:[["1,270 mm","Width"],["1,635 kg","Weight"],["240 mm","Clearance"]],
+    desc:"Wide tracked platform with a long published track base and D1105 power for open rural, agricultural and landscaping conditions.",
+    australia:["Open acreage and farms","Mud and uneven ground","Rural material handling","Larger landscaping sites","Customers valuing footprint over gate access"],
+    attachments:["Bucket and multi-function bucket","Forks","Grapple","Auger after flow confirmation","Other hydraulic tools after compatibility testing"],
+    why:"Its Australian role must be wider-footprint acreage work. Otherwise its engine and weight are too close to the much narrower V1000.",
+    warning:"TOVISEN must prove the product difference through price, ground pressure, stability, track durability, ROC and hydraulic capability. Do not claim steep-slope superiority without an approved slope limit.",
+    specs:[
+      ["Engine","Kubota D1105","published"],
+      ["Power","18.5 kW","published"],
+      ["Operating weight","1,635 kg","published"],
+      ["Bucket capacity","0.15 m³","published"],
+      ["Overall dimensions","2836 x 1270 x 1550 mm","published"],
+      ["Track base length","2,035 mm","published"],
+      ["Track width","1,045 mm","published"],
+      ["Maximum dump height","1,826 mm","published"],
+      ["Ground clearance","240 mm","published"],
+      ["Travel speed","0-5 km/h","published"],
+      ["ROC and tipping load","Not published","check"],
+      ["Auxiliary flow and pressure","Not published","check"]
+    ]
+  },
+  v2000:{
+    name:"V2000", label:"Phase 3 - Specialist high-output pilot",
+    role:"A controlled commercial pilot for tree services, vegetation work, heavy grapples and larger specialist attachments.",
+    image:"https://img.youtube.com/vi/XOQ7BIV1wp4/hqdefault.jpg",
+    source:"https://www.youtube.com/shorts/XOQ7BIV1wp4",
+    phase:"PHASE 3 - PILOT LAST",
+    quick:[["75 hp*","Engine claim"],["~2.8 t","Published"],["1.5 t*","Load claim"]],
+    desc:"High-output tracked stand-on machine occupying a space between large mini loaders and small enclosed compact track loaders.",
+    australia:["Tree services","Vegetation management","Rural contractors","Heavy grapple and material handling","Specialist attachment trials"],
+    attachments:["Large buckets and forks","Heavy grapple","Commercial trenching","Stump grinding","Forestry mulcher only after verified flow, cooling and guarding"],
+    why:"It gives TOVISEN a distinctive halo product, but its power, mass, transport and specialist attachment use demand stronger validation than the smaller machines.",
+    warning:"The 1.5 tonne figure is a nominal or maximum-load claim, not a verified ROC. Operating versus shipping weight, tipping load, hydraulic output, cooling, attachment power, safety systems and transport implications require controlled verification.",
+    specs:[
+      ["Engine","Cummins QSF2.8 turbo diesel","published claim"],
+      ["Power","55 kW / approximately 75 hp","published claim"],
+      ["Published weight","Approximately 2,822 kg - confirm operating vs shipping","claim"],
+      ["Published dimensions","Approximately 3220 x 1420 x 1680 mm","claim"],
+      ["Bucket capacity","0.34 m³ marketplace claim","claim"],
+      ["Maximum / nominal load claim","1.5 tonnes","claim"],
+      ["Rated operating capacity","Not established","check"],
+      ["Tipping load","Not established","check"],
+      ["Auxiliary hydraulic flow","Not verified","check"],
+      ["Hydraulic cooling","Not verified","check"],
+      ["Forestry-mulcher configuration","Pilot evaluation only","check"]
+    ]
+  }
+};
+
+
+var attachments = {
+  bucket4in1:{
+    name:"TOVISEN 4-in-1 Bucket",
+    availability:"Official TOVISEN attachment",
+    future:false,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601251769407504137211.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/4-in-1-multi-purpose-bucket/",
+    lead:"A hydraulically operated multi-purpose bucket for loading, dozing, grading, controlled spreading and grappling. TOVISEN states that it is optimised for compact loaders including the V1000.",
+    fit:"The bucket's own structural or stated loading figure does not define the loader's safe carrying capacity. The machine's verified ROC, tipping load, coupler geometry and hydraulic circuit remain controlling.",
+    specs:[
+      ["Overall dimensions","1000 × 540 × 600 mm (customisable)","published"],
+      ["Unit weight","113.6 kg","published"],
+      ["Published rated loading capacity","109 kg - terminology requires clarification","claim"],
+      ["Bucket volume","0.32 m³","published"],
+      ["Control system","Dual hydraulic cylinders","published"],
+      ["Mounting","Standard universal quick attach; optional couplers","published"],
+      ["Functions","Loading, dozing, grading, spreading and grappling","published"]
+    ]
+  },
+  forks:{
+    name:"TOVISEN Side-Shift Pallet Forks",
+    availability:"Official TOVISEN attachment",
+    future:false,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601251769411496170166.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/side-shift-pallet-forks/",
+    lead:"Forged pallet forks with adjustable width and manual or hydraulic side-shift options. TOVISEN specifically describes them as designed for the V1000 and other loaders.",
+    fit:"The advertised 2,000 kg fork capacity is the attachment's structural claim, not the V1000's lift rating. Actual safe load is limited by the loader's verified ROC, tipping load, load centre and lift height.",
+    specs:[
+      ["Advertised fork capacity","2,000 kg - attachment structural claim","claim"],
+      ["Fork dimensions","1070 × 100 × 45 mm","published"],
+      ["Fork weight (pair)","180 kg","published"],
+      ["Side shift","Manual or hydraulic options","published"],
+      ["Material","High-strength forged steel tines","published"],
+      ["Mounting","Standard universal quick attach","published"],
+      ["Alternative tine lengths","1070 mm, 1220 mm or custom","published"]
+    ]
+  },
+  auger:{
+    name:"TOVISEN Hydraulic Auger",
+    availability:"Official TOVISEN attachment",
+    future:false,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601261769420274512214.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/heavy-duty-hydraulic-auger-drive/",
+    lead:"A hydraulic post-hole auger offered with multiple bit diameters and a universal quick-attach plate. TOVISEN explicitly describes it as compatible with compact loaders such as the V1000.",
+    fit:"The official page does not publish required hydraulic flow, pressure, drive torque or attachment weight. Those values must be supplied before a final machine-by-machine compatibility table can be certified.",
+    specs:[
+      ["Bit option A","150 × 1000 mm","published"],
+      ["Bit option B","200 × 1000 mm","published"],
+      ["Bit option C","250 × 1000 mm","published"],
+      ["Bit option D","300 × 1000 mm","published"],
+      ["Drive","High-performance hydraulic motor","published"],
+      ["Mounting","Universal quick-attach plate","published"],
+      ["Hydraulic flow / pressure","Not published","check"],
+      ["Drive torque / unit weight","Not published","check"]
+    ]
+  },
+  trencher:{
+    name:"TOVISEN Hydraulic Trencher",
+    availability:"Official TOVISEN attachment",
+    future:false,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601251769413963222729.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/heavy-duty-trencher-attachment/",
+    lead:"A compact utility trencher for drainage, irrigation, cable and pipe installation. TOVISEN describes it as optimised for loaders such as the V1000.",
+    fit:"The attachment mass is significant and the official page does not provide required hydraulic flow, pressure or drive power. Final approval depends on those values and the carrier's stability with the boom and spoil auger loaded.",
+    specs:[
+      ["Overall dimensions","1910 × 800 × 625 mm","published"],
+      ["Unit weight","178 kg","published"],
+      ["Maximum trench depth","800 mm","published"],
+      ["Single-cut width","155 mm","published"],
+      ["Chain pitch","50.8 mm","published"],
+      ["Mounting","Standard universal quick attach","published"],
+      ["Hydraulic flow / pressure","Not published","check"],
+      ["Chain options","Standard, rocky or specialised soil options","published"]
+    ]
+  },
+  stumpgrinder:{
+    name:"TOVISEN Stump Grinder",
+    availability:"Official TOVISEN attachment",
+    future:false,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601261769484203512044.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/stump-grinder-attachment-industrial/",
+    lead:"A compact hydraulic stump grinder with a 400 mm cutter disc and universal quick attach. TOVISEN states that hydraulic tuning can be supplied for standard- or high-flow systems.",
+    fit:"The page publishes pressure but not required flow. The 140 kg attachment mass, cutting reaction, guard arrangement, case-drain requirement and continuous hydraulic cooling must be matched to the exact carrier.",
+    specs:[
+      ["Overall dimensions","988 × 620 × 500 mm","published"],
+      ["Unit weight","140 kg","published"],
+      ["Maximum cutting depth","300 mm","published"],
+      ["Cutter-disc diameter","400 mm","published"],
+      ["System pressure","16 MPa","published"],
+      ["Mounting","Universal quick attach","published"],
+      ["Required hydraulic flow","Not published","check"],
+      ["Hydraulic tuning","Standard- or high-flow configurations offered","published"]
+    ]
+  },
+  brushmulcher:{
+    name:"TOVISEN Forestry Brush Mulcher",
+    availability:"Official TOVISEN attachment",
+    future:false,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601261769493986264938.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/industrial-skid-steer-brush-mulcher/",
+    lead:"TOVISEN's listed compact forestry brush mulcher is a 930 mm head designed for dense brush and small trees. Its published hydraulic range is directly relevant to the proposed V1000 discussion.",
+    fit:"The published 40-60 L/min and 14-21 MPa range overlaps public V1000 hydraulic claims, but that does not by itself prove safe compatibility. At 320 kg, carrier ROC, tipping load, coupler geometry, cooling, return pressure, case drain and debris protection still require confirmation.",
+    specs:[
+      ["Working width","930 mm","published"],
+      ["Maximum cutting diameter","100 mm","published"],
+      ["Blade quantity","21","published"],
+      ["Required system flow","40-60 L/min","published"],
+      ["Working pressure","14-21 MPa","published"],
+      ["Overall dimensions","1185 × 900 × 1100 mm","published"],
+      ["Unit weight","320 kg","published"],
+      ["Blade options","Flail or fixed teeth","published"]
+    ]
+  },
+  highoutput:{
+    name:"High-Output Forestry Mulcher",
+    availability:"Future / unconfirmed product",
+    future:true,
+    image:"https://e-zan.com/zb_users/upload/2026/01/202601261769493986264938.jpg",
+    source:"https://e-zan.com/skid-steer-attachments-for-sale/",
+    lead:"No separate high-output forestry mulcher data sheet was identified in TOVISEN's current official-facing skid-steer attachment catalogue. The listed TOVISEN brush mulcher is the 40-60 L/min, 320 kg model shown here.",
+    fit:"This should remain a V2000 future-pilot category until TOVISEN supplies a specific head, required flow and pressure, motor configuration, cooling requirement, attachment mass, case drain, guarding and approved carrier list.",
+    specs:[
+      ["Separate TOVISEN product identified","No","check"],
+      ["Current listed TOVISEN mulcher flow","40-60 L/min","published"],
+      ["Current listed mulcher pressure","14-21 MPa","published"],
+      ["Current listed mulcher weight","320 kg","published"],
+      ["V2000 high-output match","Manufacturer proposal required","check"],
+      ["Required guarding and debris protection","Not supplied","check"]
+    ]
   }
 };
 
 var displayOrder=["v1000","s360","s370","t750","v800","v2000"];
-var attachmentOrder=["bucket","forks","auger","trencher","stump","mulcher"];
+var machineGrid=document.getElementById("machineGrid");
 
-function esc(v){return String(v).replace(/[&<>"']/g,function(c){return({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"})[c];});}
-
-function renderMachines(){
+function escapeHtml(value){
+  return String(value).replace(/[&<>"']/g,function(c){return({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"})[c]});
+}
+function renderCards(){
   var html="";
   displayOrder.forEach(function(key){
     var m=machines[key];
-    html+='<article class="machine-card" data-machine="'+key+'" tabindex="0" role="button">'+
-      '<div class="machine-photo"><span class="machine-role">'+esc(m.role)+'</span><span class="video-pill">▶ Working video</span>'+
-      '<img loading="lazy" src="'+esc(m.image)+'" alt="'+esc(m.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'+
-      '<div class="fallback">'+esc(m.name)+'</div>'+
-      '<div class="machine-title"><strong>'+esc(m.name)+'</strong><span>'+esc(m.tag)+'</span></div></div>'+
-      '<div class="machine-body"><p>'+esc(m.desc)+'</p><div class="quick-specs">';
-    m.quick.forEach(function(q){html+='<div class="quick-spec"><b>'+esc(q[0])+'</b><span>'+esc(q[1])+'</span></div>';});
-    html+='</div><div class="card-link">Open machine data →</div></div></article>';
+    html+='<article class="machine-card '+(key==="v1000"?"hero-model":"")+'" data-machine="'+key+'" tabindex="0" role="button" aria-label="Open '+escapeHtml(m.name)+' specifications">'+
+      '<div class="machine-photo">'+
+        '<span class="phase-badge">'+escapeHtml(m.phase)+'</span>'+
+        '<img loading="lazy" src="'+escapeHtml(m.image)+'" alt="TOVISEN '+escapeHtml(m.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'+
+        '<div class="fallback">'+escapeHtml(m.name)+'</div>'+
+        '<div class="machine-title"><strong>'+escapeHtml(m.name)+'</strong><span>'+escapeHtml(m.label)+'</span></div>'+
+      '</div>'+
+      '<div class="machine-body"><p>'+escapeHtml(m.desc)+'</p><div class="quick-specs">';
+    m.quick.forEach(function(q){html+='<div class="quick-spec"><b>'+escapeHtml(q[0])+'</b><span>'+escapeHtml(q[1])+'</span></div>';});
+    html+='</div><div class="card-footer"><span>Click anywhere for the full data card</span><b>Open specifications →</b></div></div></article>';
   });
-  document.getElementById("machineGrid").innerHTML=html;
-  Array.prototype.forEach.call(document.querySelectorAll("[data-machine]"),function(card){
-    function open(){openMachine(card.getAttribute("data-machine"));}
-    card.addEventListener("click",open);
-    card.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
-  });
-}
-
-function renderAttachments(){
-  var html="";
-  attachmentOrder.forEach(function(key){
-    var a=attachments[key];
-    html+='<article class="attachment-card" data-attachment="'+key+'" tabindex="0" role="button">'+
-      '<div class="attachment-photo" style="position:relative"><span class="video-pill">▶ Working video</span><img loading="lazy" src="'+esc(a.image)+'" alt="'+esc(a.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+esc(a.name)+'</div></div>'+
-      '<div class="attachment-body"><h3>'+esc(a.name)+'</h3><p>'+esc(a.desc)+'</p><div class="card-link">Open attachment data →</div></div></article>';
-  });
-  document.getElementById("attachmentGrid").innerHTML=html;
-  Array.prototype.forEach.call(document.querySelectorAll("[data-attachment]"),function(card){
-    function open(){openAttachment(card.getAttribute("data-attachment"));}
-    card.addEventListener("click",open);
-    card.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
+  machineGrid.innerHTML=html;
+  var cards=machineGrid.querySelectorAll(".machine-card");
+  Array.prototype.forEach.call(cards,function(card){
+    card.addEventListener("click",function(){openPanel(card.getAttribute("data-machine"));});
+    card.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();openPanel(card.getAttribute("data-machine"));}});
   });
 }
 
-var backdrop=document.getElementById("panelBackdrop"),panel=document.getElementById("detailPanel"),panelInner=document.getElementById("panelInner");
-function openPanel(html){
-  panelInner.innerHTML=html;backdrop.classList.add("open");panel.classList.add("open");document.body.classList.add("no-scroll");panel.setAttribute("aria-hidden","false");
+function statusChip(status){
+  if(status==="published") return '<span class="status status-published">Published</span>';
+  if(status==="claim"||status==="published claim") return '<span class="status status-claim">Claim - verify</span>';
+  return '<span class="status status-check">Confirmation needed</span>';
 }
-
-function closePanel(){backdrop.classList.remove("open");panel.classList.remove("open");document.body.classList.remove("no-scroll");panel.setAttribute("aria-hidden","true");}
-
-var videoModal=document.getElementById("videoModal");
-var videoFrame=document.getElementById("videoFrame");
-var videoTitle=document.getElementById("videoTitle");
-var videoLabel=document.getElementById("videoLabel");
-var videoDescription=document.getElementById("videoDescription");
-var videoObserve=document.getElementById("videoObserve");
-var youtubeFallback=document.getElementById("youtubeFallback");
-
-function openVideo(type,key){
-  var v=videoLibrary[type]&&videoLibrary[type][key];
-  if(!v){return;}
-
-  var watchUrl="https://www.youtube.com/watch?v="+encodeURIComponent(v.id);
-  var posterUrl="https://i.ytimg.com/vi/"+encodeURIComponent(v.id)+"/hqdefault.jpg";
-  var localMode=location.protocol==="file:";
-
-  videoTitle.textContent=v.title;
-  videoLabel.textContent=v.label;
-  videoDescription.textContent=v.description;
-  videoObserve.innerHTML=v.observe.map(function(x){return "<li>"+esc(x)+"</li>";}).join("");
-  youtubeFallback.href=watchUrl;
-  document.getElementById("localYouTubeButton").href=watchUrl;
-  document.getElementById("videoPoster").src=posterUrl;
-
-  var localFallback=document.getElementById("videoLocalFallback");
-  var localNote=document.getElementById("localModeNote");
-
-  if(localMode){
-    videoFrame.src="";
-    videoFrame.style.display="none";
-    localFallback.classList.add("show");
-    localNote.classList.add("show");
-  }else{
-    localFallback.classList.remove("show");
-    localNote.classList.remove("show");
-    videoFrame.style.display="block";
-
-    var originParam="";
-    if(location.origin && location.origin!=="null"){
-      originParam="&origin="+encodeURIComponent(location.origin);
-    }
-
-    videoFrame.src="https://www.youtube.com/embed/"+encodeURIComponent(v.id)+"?autoplay=1&rel=0&modestbranding=1"+originParam;
-  }
-
-  videoModal.classList.add("open");
-  videoModal.setAttribute("aria-hidden","false");
-  document.body.classList.add("no-scroll");
+var panel=document.getElementById("specPanel");
+var backdrop=document.getElementById("panelBackdrop");
+var panelInner=document.getElementById("panelInner");
+function openPanel(key){
+  var m=machines[key], rows="", a="", att="";
+  m.specs.forEach(function(s){rows+='<tr><td>'+escapeHtml(s[0])+'</td><td><span class="spec-value">'+escapeHtml(s[1])+'</span><br>'+statusChip(s[2])+'</td></tr>';});
+  m.australia.forEach(function(x){a+='<li>'+escapeHtml(x)+'</li>';});
+  m.attachments.forEach(function(x){att+='<li>'+escapeHtml(x)+'</li>';});
+  panelInner.innerHTML=
+    '<div class="panel-hero"><img src="'+escapeHtml(m.image)+'" alt="'+escapeHtml(m.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+escapeHtml(m.name)+'</div>'+
+    '<div class="panel-head"><small>'+escapeHtml(m.label)+'</small><h2>'+escapeHtml(m.name)+'</h2><div>'+escapeHtml(m.role)+'</div></div></div>'+
+    '<div class="panel-content"><p class="panel-lead">'+escapeHtml(m.why)+'</p>'+
+    '<table class="spec-table"><tbody>'+rows+'</tbody></table>'+
+    '<div class="panel-columns"><div class="panel-box"><h3>Best Australian uses</h3><ul>'+a+'</ul></div><div class="panel-box"><h3>Attachment pathway</h3><ul>'+att+'</ul></div></div>'+
+    '<div class="data-warning"><b>Data discipline:</b> '+escapeHtml(m.warning)+'</div>'+
+    '<p style="margin-top:20px"><a href="'+escapeHtml(m.source)+'" target="_blank" rel="noopener" style="color:#d71920;font-weight:900">Open the source page →</a></p></div>';
+  panel.classList.add("open");backdrop.classList.add("open");document.body.classList.add("no-scroll");panel.setAttribute("aria-hidden","false");
 }
-
-function closeVideo(){
-  videoModal.classList.remove("open");
-  videoModal.setAttribute("aria-hidden","true");
-  videoFrame.src="";
-  videoFrame.style.display="block";
-  document.getElementById("videoLocalFallback").classList.remove("show");
-  document.getElementById("localModeNote").classList.remove("show");
-  if(!panel.classList.contains("open")){document.body.classList.remove("no-scroll");}
-}
-
-document.getElementById("videoClose").addEventListener("click",closeVideo);
-document.getElementById("videoBack").addEventListener("click",closeVideo);
-videoModal.addEventListener("click",function(e){if(e.target===videoModal){closeVideo();}});
-document.addEventListener("click",function(e){
-  var btn=e.target.closest("[data-video-type][data-video-key]");
-  if(btn){
-    e.preventDefault();
-    openVideo(btn.getAttribute("data-video-type"),btn.getAttribute("data-video-key"));
-  }
-});
-
+function closePanel(){panel.classList.remove("open");backdrop.classList.remove("open");document.body.classList.remove("no-scroll");panel.setAttribute("aria-hidden","true");}
 document.getElementById("panelClose").addEventListener("click",closePanel);
 backdrop.addEventListener("click",closePanel);
-document.addEventListener("keydown",function(e){
-  if(e.key==="Escape"){
-    if(videoModal.classList.contains("open")){closeVideo();}
-    else{closePanel();}
-  }
-});
-
-function openMachine(key){
-  var m=machines[key],rows="",uses="";
-  m.specs.forEach(function(s){rows+='<tr><td>'+esc(s[0])+'</td><td>'+esc(s[1])+'</td></tr>';});
-  m.uses.forEach(function(u){uses+='<li>'+esc(u)+'</li>';});
-  openPanel('<div class="panel-hero"><img src="'+esc(m.image)+'" alt="'+esc(m.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+esc(m.name)+'</div><div class="panel-head"><small>'+esc(m.role)+'</small><h2>'+esc(m.name)+'</h2><div>'+esc(m.tag)+'</div></div></div>'+
-    '<div class="panel-content"><p class="panel-lead">'+esc(m.desc)+'</p><table class="spec-table"><tbody>'+rows+'</tbody></table>'+
-    '<div class="panel-columns"><div class="panel-box"><h3>Best-fit work</h3><ul>'+uses+'</ul></div><div class="panel-box"><h3>Australian position</h3><p style="color:#596168;line-height:1.65;font-size:12px">'+esc(m.role)+' - '+esc(m.tag)+'.</p></div></div>'+
-    '<div class="data-note"><b>Configuration note:</b> '+esc(m.note)+'</div>'+
-    '<div class="watch-row"><button class="btn btn-red watch-btn" data-video-type="machine" data-video-key="'+key+'"><span class="play-dot">▶</span> Watch '+esc(m.name)+' in action</button></div></div>');
-}
-function openAttachment(key){
-  var a=attachments[key],rows="";
-  a.specs.forEach(function(s){rows+='<tr><td>'+esc(s[0])+'</td><td>'+esc(s[1])+'</td></tr>';});
-  openPanel('<div class="panel-hero"><img src="'+esc(a.image)+'" alt="'+esc(a.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+esc(a.name)+'</div><div class="panel-head"><small>TOVISEN attachment</small><h2>'+esc(a.name)+'</h2><div>Published product data and machine-fit considerations</div></div></div>'+
-    '<div class="panel-content"><p class="panel-lead">'+esc(a.desc)+'</p><table class="spec-table"><tbody>'+rows+'</tbody></table>'+
-    '<div class="data-note"><b>Machine-fit note:</b> '+esc(a.note)+'</div>'+
-    '<div class="watch-row"><button class="btn btn-red watch-btn" data-video-type="attachment" data-video-key="'+key+'"><span class="play-dot">▶</span> Watch '+esc(a.name)+' working</button></div></div>');
-}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closePanel();});
 
 var questions=[
-  {q:"Where will the machine work most often?",o:[
-    ["Indoors or in noise-sensitive facilities",{s360:8,s370:2}],
-    ["Concrete, asphalt, sheds or firm yards",{s370:8,s360:3}],
-    ["Restricted landscaping and narrow access",{t750:7,v1000:5}],
-    ["Open acreage, farms and rural property",{v800:7,v1000:6}],
-    ["Commercial tree, vegetation or heavy specialist work",{v2000:9,v1000:3}]
+  {q:"Where will the machine spend most of its time?",o:[
+    ["Indoors, enclosed facilities or noise-sensitive sites",{s360:7,s370:2}],
+    ["Concrete, asphalt, compacted yards or warehouses",{s370:7,s360:3}],
+    ["Residential landscaping and restricted paths",{t750:6,v1000:4,s360:1}],
+    ["Open acreage, farms and rural properties",{v800:6,v1000:5,t750:1}],
+    ["Commercial tree, vegetation or heavy contractor work",{v2000:8,v1000:3}]
   ]},
   {q:"What is the narrowest access the machine must pass through?",o:[
-    ["Under 1,000 mm",{s360:5,t750:6,v1000:7,s370:-3,v800:-5,v2000:-7}],
-    ["1,000-1,150 mm",{s370:5,v1000:4,t750:3,s360:2,v800:-2}],
-    ["1,150-1,400 mm",{v800:5,v1000:3,s370:2}],
+    ["Under 1,000 mm",{s360:5,t750:5,v1000:6,s370:-3,v800:-5,v2000:-7}],
+    ["1,000-1,150 mm",{s370:5,t750:3,v1000:4,s360:2,v800:-2,v2000:-4}],
+    ["1,150-1,400 mm",{v800:4,v1000:3,s370:2,t750:1,v2000:-2}],
     ["Access width is not important",{v2000:5,v800:4,v1000:3}]
   ]},
-  {q:"Which surface or terrain best describes the job?",o:[
-    ["Firm, hard and mainly level",{s370:7,s360:4}],
-    ["Finished landscaping or turf",{t750:4,v1000:4,s360:2}],
-    ["Soft soil, mud or mixed uneven ground",{v800:6,v1000:6,t750:4}],
-    ["Open rough acreage with room to manoeuvre",{v800:8,v1000:4,v2000:2}],
-    ["Heavy clearing and demanding commercial ground",{v2000:8,v1000:3}]
+  {q:"Which surface or terrain best describes the work?",o:[
+    ["Firm, hard and mainly level",{s370:6,s360:4}],
+    ["Finished turf or landscaped areas",{t750:3,v1000:3,s360:2,s370:1}],
+    ["Soft soil, mud or uneven ground",{v800:6,v1000:5,t750:4}],
+    ["Open rough acreage with room to manoeuvre",{v800:7,v1000:4,v2000:2}],
+    ["Heavy clearing and demanding commercial ground",{v2000:7,v1000:3}]
   ]},
   {q:"What is the main job?",o:[
-    ["Light material movement and facility work",{s360:7,s370:5}],
-    ["Buckets, forks and general property work",{v1000:7,v800:4,s370:3,t750:3}],
-    ["Fencing, post holes and augering",{v1000:8,t750:4,v800:4}],
-    ["Landscaping, drainage and trenching",{v1000:8,v800:4,t750:3}],
-    ["Tree work, grapples and vegetation management",{v2000:9,v1000:4}]
+    ["Light material movement and facility work",{s360:6,s370:5}],
+    ["Buckets, forks and general property work",{v1000:6,v800:4,s370:3,t750:3}],
+    ["Fencing, post holes and augering",{v1000:7,t750:4,v800:4}],
+    ["Landscaping, drainage and trenching",{v1000:7,v800:4,t750:3,v2000:2}],
+    ["Tree work, large grapples and vegetation management",{v2000:8,v1000:4}]
   ]},
-  {q:"Which attachment matters most?",o:[
+  {q:"Which power preference matters most?",o:[
+    ["Electric or zero local exhaust is important",{s360:9,t750:2}],
+    ["Conventional diesel is preferred",{v1000:4,v800:4,v2000:4,s370:3,t750:3}],
+    ["No strong preference",{v1000:2,s370:1,t750:1,v800:1,s360:1,v2000:1}]
+  ]},
+  {q:"Which hydraulic attachment is most important?",o:[
     ["Bucket, forks or grapple",{v1000:5,v800:4,s370:3,t750:3,s360:2,v2000:3}],
-    ["Auger",{v1000:8,t750:4,v800:4,v2000:2}],
-    ["Trencher",{v1000:8,v800:4,t750:2,v2000:3}],
-    ["Low-flow stump grinder",{v1000:9,v2000:5}],
-    ["Low-flow brush or light forestry mulcher",{v1000:8,v2000:8}],
-    ["High-output specialist attachment",{v2000:11,v1000:-2}]
+    ["Auger",{v1000:7,t750:4,v800:4,v2000:3}],
+    ["Trencher",{v1000:7,v800:4,v2000:4,t750:2}],
+    ["Low-flow stump grinder",{v1000:8,v2000:5,v800:1}],
+    ["Low-flow brush or light forestry mulcher",{v1000:7,v2000:7,v800:1}],
+    ["High-output forestry mulcher",{v2000:10,v1000:-2}]
   ]},
-  {q:"How demanding will the work be?",o:[
+  {q:"How demanding is the expected duty cycle?",o:[
     ["Occasional and light",{s360:4,s370:4,t750:3}],
-    ["Several days each week",{v1000:6,v800:4,t750:2,s370:2}],
-    ["Daily commercial work",{v1000:8,v2000:5,v800:3}],
-    ["Specialist high-output contracting",{v2000:11,v1000:2}]
+    ["Several days each week",{v1000:5,v800:4,t750:2,s370:2}],
+    ["Daily commercial work",{v1000:7,v2000:5,v800:3}],
+    ["Specialist high-output contracting",{v2000:10,v1000:2}]
+  ]},
+  {q:"What matters most in the purchase decision?",o:[
+    ["Low emissions and quiet operation",{s360:8}],
+    ["Simple ownership without tracks",{s370:8}],
+    ["Narrow tracked access",{t750:7,v1000:5}],
+    ["Open-ground footprint and acreage use",{v800:8,v1000:3}],
+    ["One versatile industrial workhorse",{v1000:9}],
+    ["Maximum output and specialist capability",{v2000:10}]
   ]}
 ];
-var qIndex=0,answers=[];
+var qIndex=0,answers=[],choice=null;
+var qText=document.getElementById("questionText"),options=document.getElementById("options"),stepLabel=document.getElementById("stepLabel"),progressBar=document.getElementById("progressBar"),progressText=document.getElementById("progressText"),history=document.getElementById("answerHistory"),backBtn=document.getElementById("backBtn"),shell=document.getElementById("selectorShell"),result=document.getElementById("resultPanel");
+
 function renderQuestion(){
   var q=questions[qIndex],html="";
-  document.getElementById("questionText").textContent=q.q;
-  document.getElementById("stepLabel").textContent="Question "+String(qIndex+1).padStart(2,"0");
-  document.getElementById("progressText").textContent="Question "+(qIndex+1)+" of "+questions.length;
-  document.getElementById("progressBar").style.width=(((qIndex+1)/questions.length)*100)+"%";
-  q.o.forEach(function(opt,i){html+='<button class="option'+(answers[qIndex]===i?' active':'')+'" data-answer="'+i+'">'+esc(opt[0])+'</button>';});
-  document.getElementById("options").innerHTML=html;
-  document.getElementById("backBtn").disabled=qIndex===0;
-  Array.prototype.forEach.call(document.querySelectorAll("[data-answer]"),function(btn){
+  qText.textContent=q.q;stepLabel.textContent="Question "+String(qIndex+1).padStart(2,"0");
+  progressText.textContent="Question "+(qIndex+1)+" of "+questions.length;
+  progressBar.style.width=(((qIndex+1)/questions.length)*100)+"%";
+  q.o.forEach(function(opt,i){html+='<button class="option'+(answers[qIndex]===i?' active':'')+'" data-i="'+i+'">'+escapeHtml(opt[0])+'</button>';});
+  options.innerHTML=html;choice=typeof answers[qIndex]==="number"?answers[qIndex]:null;backBtn.disabled=qIndex===0;
+  Array.prototype.forEach.call(options.querySelectorAll(".option"),function(btn){
     btn.addEventListener("click",function(){
-      answers[qIndex]=parseInt(btn.getAttribute("data-answer"),10);
+      choice=parseInt(btn.getAttribute("data-i"),10);
+      answers[qIndex]=choice;
+      Array.prototype.forEach.call(options.querySelectorAll(".option"),function(x){x.classList.remove("active");});
+      btn.classList.add("active");
       renderHistory();
-      if(qIndex<questions.length-1){window.setTimeout(function(){qIndex++;renderQuestion();},220);}
-      else{window.setTimeout(showResult,220);}
+      window.setTimeout(function(){
+        if(qIndex<questions.length-1){qIndex++;renderQuestion();}else{showResult();}
+      },260);
     });
   });
 }
 function renderHistory(){
   var html="";
-  answers.forEach(function(a,i){if(typeof a==="number"){html+='<span class="history-chip">'+esc(questions[i].o[a][0])+'</span>';}});
-  document.getElementById("answerHistory").innerHTML=html;
+  answers.forEach(function(a,idx){if(typeof a==="number"){html+='<span class="history-chip">'+escapeHtml(questions[idx].o[a][0])+'</span>';}});
+  history.innerHTML=html;
 }
-document.getElementById("backBtn").addEventListener("click",function(){if(qIndex>0){qIndex--;renderQuestion();}});
+backBtn.addEventListener("click",function(){if(qIndex>0){qIndex--;renderQuestion();}});
+function scores(){
+  var s={s360:0,s370:0,t750:0,v800:0,v1000:0,v2000:0};
+  answers.forEach(function(a,idx){
+    var weights=questions[idx].o[a][1];
+    Object.keys(weights).forEach(function(k){s[k]+=weights[k];});
+  });
+  return s;
+}
+function selectedAttachment(){
+  if(typeof answers[5]!=="number")return "Attachment to be confirmed";
+  return questions[5].o[answers[5]][0];
+}
 function showResult(){
-  var scores={s360:0,s370:0,t750:0,v800:0,v1000:0,v2000:0};
-  answers.forEach(function(a,i){var w=questions[i].o[a][1];Object.keys(w).forEach(function(k){scores[k]+=w[k];});});
-  var order=Object.keys(scores).sort(function(a,b){return scores[b]-scores[a];});
-  var best=order[0],alt=order[1],m=machines[best],difference=scores[best]-scores[alt],pct=Math.max(73,Math.min(97,79+difference*2));
+  var s=scores(),order=Object.keys(s).sort(function(a,b){return s[b]-s[a];}),best=order[0],alt=order[1],m=machines[best];
+  var difference=s[best]-s[alt],pct=Math.max(72,Math.min(97,78+difference*2));
   var reasons={
-    s360:["Your work favours electric or low-emission operation.","The expected jobs are compact and relatively light.","Indoor or noise-sensitive conditions create a strong fit."],
-    s370:["Firm surfaces and wheeled simplicity dominate your answers.","The larger bucket supports practical material movement.","You do not need the added cost and maintenance of tracks."],
-    t750:["Restricted access and tracks are both important.","The expected duty level is below the V1000's strongest commercial role.","A narrow tracked platform is the priority."],
-    v800:["Open acreage and rough-ground work dominate your answers.","The wider platform suits sites where gate access is not critical.","It creates a clear open-property role below the specialist V2000."],
-    v1000:["You need one versatile machine rather than a single-purpose entry model.","Narrow access, tracked traction and attachment work all matter.","This is the strongest proposed Australian flagship."],
-    v2000:["The job is specialist, heavy and commercially demanding.","Your selected attachment requires a higher-output pathway.","A controlled specialist product is a better match than an entry machine."]
+    s360:["Your answers favour electric or low-emission operation.","The job is compact and relatively light-duty.","Indoor and noise-sensitive conditions create a clear specialist role."],
+    s370:["Firm surfaces and wheeled simplicity dominate your answers.","The larger published bucket supports practical material movement.","You do not need the added cost and maintenance of tracks."],
+    t750:["Restricted access and tracks are both important.","The job is below the V1000’s strongest commercial duty level.","Its role is narrow access, not an unverified steep-slope claim."],
+    v800:["Open acreage and rough-ground work dominate your answers.","The wider published footprint suits sites where gate access is not critical.","It needs proof of ground pressure, ROC and slope limits before final sale."],
+    v1000:["You need a versatile machine rather than a single-purpose entry model.","Narrow access, tracked traction and commercial attachment work all matter.","This is the strongest first Australian launch proposition."],
+    v2000:["The work is specialist, heavy and commercially demanding.","Your selected attachment requires a higher-output evaluation pathway.","It should enter through a controlled pilot rather than a mass launch."]
   };
-  document.getElementById("selectorShell").style.display="none";
-  var result=document.getElementById("resultPanel");result.classList.add("show");
-  result.innerHTML='<div class="result-image"><img src="'+esc(m.image)+'" alt="'+esc(m.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+esc(m.name)+'</div><div class="result-name"><small>Your strongest match</small><strong>'+esc(m.name)+'</strong><span>'+esc(m.tag)+'</span></div></div>'+
-    '<div class="result-copy"><div class="fit-score">'+pct+'% <small>fit score</small></div><h3>'+esc(m.role)+'</h3>'+
-    '<div class="reason-list"><div class="reason">'+esc(reasons[best][0])+'</div><div class="reason">'+esc(reasons[best][1])+'</div><div class="reason">'+esc(reasons[best][2])+'</div></div>'+
-    '<div class="recommendation-box"><b>Alternative:</b> '+esc(machines[alt].name)+'<br><br>Final selection would be confirmed against exact dimensions, load, hydraulics, attachments, transport and Australian configuration.</div>'+
-    '<div class="actions"><button class="btn btn-red" id="resultData">View machine data</button><button class="btn btn-dark" id="resultBuild">Build this package</button><button class="btn" id="restartQuiz">Start again</button></div></div>';
-  document.getElementById("resultData").addEventListener("click",function(){openMachine(best);});
-  document.getElementById("resultBuild").addEventListener("click",function(){selectBuilderMachine(best);document.getElementById("build").scrollIntoView({behavior:"smooth"});});
-  document.getElementById("restartQuiz").addEventListener("click",function(){qIndex=0;answers=[];result.classList.remove("show");result.innerHTML="";document.getElementById("selectorShell").style.display="grid";renderHistory();renderQuestion();});
+  var attachment=selectedAttachment();
+  var guidance="";
+  if(best==="v1000"&&(attachment.indexOf("stump")>-1||attachment.indexOf("mulcher")>-1)){
+    guidance="Selected low-flow models may be suitable, but final approval depends on verified continuous flow, pressure, case drain, cooling, attachment mass and coupler configuration.";
+  }else if(best==="v2000"&&attachment.indexOf("forestry")>-1){
+    guidance="Treat this as a specialist pilot. Verify hydraulic output, cooling, guarding, debris protection and the exact attachment operating envelope.";
+  }else{
+    guidance="Confirm the attachment manufacturer’s required flow, pressure, weight, case-drain and carrier specification before presenting compatibility as final.";
+  }
+  shell.style.display="none";result.classList.add("show");
+  result.innerHTML=
+    '<div class="result-image"><img src="'+escapeHtml(m.image)+'" alt="'+escapeHtml(m.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+escapeHtml(m.name)+'</div>'+
+    '<div class="result-name"><small>Recommended machine</small><strong>'+escapeHtml(m.name)+'</strong><span>'+escapeHtml(m.label)+'</span></div></div>'+
+    '<div class="result-copy"><div class="fit-score">'+pct+'% <small>strategic fit</small></div><h3>'+escapeHtml(m.role)+'</h3>'+
+    '<div class="reason-list"><div class="reason">'+escapeHtml(reasons[best][0])+'</div><div class="reason">'+escapeHtml(reasons[best][1])+'</div><div class="reason">'+escapeHtml(reasons[best][2])+'</div></div>'+
+    '<div class="attachment-callout"><b>Selected attachment:</b> '+escapeHtml(attachment)+'<br><br>'+escapeHtml(guidance)+'</div>'+
+    '<p><b>Alternative:</b> '+escapeHtml(machines[alt].name)+' - '+escapeHtml(machines[alt].label)+'</p>'+
+    '<div class="actions"><button class="btn btn-red" id="openResultSpecs">Open full data card</button><button class="btn btn-dark" id="restartQuiz">Run again</button></div></div>';
+  document.getElementById("openResultSpecs").addEventListener("click",function(){openPanel(best);});
+  document.getElementById("restartQuiz").addEventListener("click",restartQuiz);
 }
+function restartQuiz(){qIndex=0;answers=[];choice=null;result.classList.remove("show");result.innerHTML="";shell.style.display="grid";renderHistory();renderQuestion();}
 
-var builderMachine="v1000";
-function renderBuilder(){
-  document.getElementById("builderMachines").innerHTML=displayOrder.map(function(key){return '<button class="choice-btn '+(key===builderMachine?'active':'')+'" data-build-machine="'+key+'">'+esc(machines[key].name)+'</button>';}).join("");
-  document.getElementById("builderAttachments").innerHTML=attachmentOrder.map(function(key){return '<label class="check-item"><input type="checkbox" value="'+key+'"> '+esc(attachments[key].name)+'</label>';}).join("");
-  Array.prototype.forEach.call(document.querySelectorAll("[data-build-machine]"),function(btn){btn.addEventListener("click",function(){selectBuilderMachine(btn.getAttribute("data-build-machine"));});});
-  Array.prototype.forEach.call(document.querySelectorAll("#builderAttachments input"),function(box){box.addEventListener("change",function(){limitAttachments(box);updateSummary();});});
-  updateSummary();
-}
-function selectBuilderMachine(key){
-  builderMachine=key;
-  Array.prototype.forEach.call(document.querySelectorAll("[data-build-machine]"),function(btn){btn.classList.toggle("active",btn.getAttribute("data-build-machine")===key);});
-  updateSummary();
-}
-function limitAttachments(changed){
-  var checked=Array.prototype.filter.call(document.querySelectorAll("#builderAttachments input"),function(x){return x.checked;});
-  if(checked.length>3){changed.checked=false;alert("Choose up to three attachments.");}
-}
-function selectedAttachments(){
-  return Array.prototype.filter.call(document.querySelectorAll("#builderAttachments input"),function(x){return x.checked;}).map(function(x){return attachments[x.value].name;});
-}
-function updateSummary(){
-  document.getElementById("summaryMachine").textContent=machines[builderMachine].name;
-  document.getElementById("summaryRole").textContent=machines[builderMachine].role;
-  var list=selectedAttachments();
-  document.getElementById("summaryAttachments").textContent=list.length?list.join(", "):"No attachments selected";
-  document.getElementById("summaryJob").textContent=document.getElementById("leadJob").value.trim()||"Add your primary job to complete the package.";
-}
-document.getElementById("leadJob").addEventListener("input",updateSummary);
-document.getElementById("prepareEnquiry").addEventListener("click",function(){
-  updateSummary();
-  document.getElementById("successMessage").style.display="block";
+var hydroData=[
+  ["S360","Electric option; compact light-duty platform.","Auxiliary flow not published. Published 17-21 bar system-pressure figure requires unit confirmation."],
+  ["S370","Dual-pump wheeled platform.","Flow and pressure not published. Do not promise powered attachments until verified."],
+  ["T750","Hydraulic-pilot tracked access model.","Buckets, augers and forks are claimed compatible, but numerical flow and pressure are absent."],
+  ["V800","D1105 tracked acreage platform.","Hydraulic quality is described, but numerical auxiliary output is not published."],
+  ["V1000","HANSA closed-loop drive claim; strongest attachment target.","Public auxiliary figures are inconsistent. Verify continuous hot flow and pressure before matching low-flow mulchers or stump grinders."],
+  ["V2000","High-output specialist concept.","Do not call it high-flow capable until exact auxiliary flow, pressure, cooling and case-drain data are supplied."]
+];
+document.getElementById("hydroGrid").innerHTML=hydroData.map(function(x){return '<article class="hydro-card"><h3>'+x[0]+'</h3><p><strong>'+x[1]+'</strong></p><p>'+x[2]+'</p></article>';}).join("");
+
+Array.prototype.forEach.call(document.querySelectorAll("[data-scroll]"),function(btn){
+  btn.addEventListener("click",function(){document.querySelector(btn.getAttribute("data-scroll")).scrollIntoView({behavior:"smooth"});});
 });
-document.getElementById("downloadBuild").addEventListener("click",function(){
-  var lines=[
-    "TOVISEN AUSTRALIA - CONCEPT BUILD SUMMARY",
-    "",
-    "Machine: "+machines[builderMachine].name,
-    "Position: "+machines[builderMachine].role,
-    "Attachments: "+(selectedAttachments().join(", ")||"None selected"),
-    "Customer: "+(document.getElementById("leadName").value||"Not provided"),
-    "Email: "+(document.getElementById("leadEmail").value||"Not provided"),
-    "State: "+document.getElementById("leadState").value,
-    "Timing: "+document.getElementById("leadTiming").value,
-    "Primary job: "+(document.getElementById("leadJob").value||"Not provided"),
-    "",
-    "Concept only - final configuration and compatibility require confirmation."
-  ];
-  var blob=new Blob([lines.join("\n")],{type:"text/plain"});
-  var url=URL.createObjectURL(blob),a=document.createElement("a");
-  a.href=url;a.download="TOVISEN_Australia_Build_Summary.txt";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+document.getElementById("fullscreenBtn").addEventListener("click",function(){
+  if(!document.fullscreenElement){document.documentElement.requestFullscreen().catch(function(){});}
+  else{document.exitFullscreen();}
 });
 
-Array.prototype.forEach.call(document.querySelectorAll("[data-scroll]"),function(btn){btn.addEventListener("click",function(){document.querySelector(btn.getAttribute("data-scroll")).scrollIntoView({behavior:"smooth"});});});
+function openAttachmentPanel(key){
+  var a=attachments[key],rows="";
+  a.specs.forEach(function(s){
+    rows+='<tr><td>'+escapeHtml(s[0])+'</td><td><span class="spec-value">'+escapeHtml(s[1])+'</span><br>'+statusChip(s[2])+'</td></tr>';
+  });
+  panelInner.innerHTML=
+    '<div class="panel-hero"><img src="'+escapeHtml(a.image)+'" alt="'+escapeHtml(a.name)+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="fallback">'+escapeHtml(a.name)+'</div>'+
+    '<div class="panel-head"><small>Attachment data sheet</small><h2>'+escapeHtml(a.name)+'</h2><div>Official-facing product information and Australian fitment notes</div></div></div>'+
+    '<div class="panel-content">'+
+      '<div class="attachment-availability '+(a.future?'future':'')+'">'+escapeHtml(a.availability)+'</div>'+
+      '<p class="panel-lead">'+escapeHtml(a.lead)+'</p>'+
+      '<table class="spec-table"><tbody>'+rows+'</tbody></table>'+
+      '<div class="attachment-fit-note"><b>Machine-fit interpretation:</b> '+escapeHtml(a.fit)+'</div>'+
+      '<p style="margin-top:20px"><a href="'+escapeHtml(a.source)+'" target="_blank" rel="noopener" style="color:#d71920;font-weight:900">Open the official-facing TOVISEN source →</a></p>'+
+    '</div>';
+  panel.classList.add("open");
+  backdrop.classList.add("open");
+  document.body.classList.add("no-scroll");
+  panel.setAttribute("aria-hidden","false");
+}
 
-renderMachines();
-renderAttachments();
-renderQuestion();
-renderBuilder();
+Array.prototype.forEach.call(document.querySelectorAll("[data-attachment]"),function(btn){
+  btn.addEventListener("click",function(){
+    openAttachmentPanel(btn.getAttribute("data-attachment"));
+  });
+});
+
+
+
+var riskData={
+  visibility:{
+    title:"Limited independent visibility",
+    text:"Australian machinery buyers rely heavily on owner comments, Facebook groups, YouTube reviews and peer discussion. Factory-led visibility alone is not enough.",
+    actions:["Create one Australian operator channel.","Document delivery, 10 hours, 50 hours and six months.","Build one owner community rather than fragmented accounts."]
+  },
+  specs:{
+    title:"Specification inconsistency",
+    text:"Different public weights, speeds, capacity terms and bucket figures undermine comparisons, transport planning and trust even when the underlying machine may be capable.",
+    actions:["Create one controlled master specification.","Freeze the Australian engine and component configuration.","Use recognised ROC and tipping-load terminology."]
+  },
+  identity:{
+    title:"V1000 identity confusion",
+    text:"The name V1000 is already strongly associated with Derette and other machines. A buyer can dismiss TOVISEN before discovering its real differences.",
+    actions:["Test a distinctive Australian-facing model identity.","Own a searchable product name.","Connect the name to the industrial-value position."]
+  },
+  support:{
+    title:"Support uncertainty",
+    text:"Before buying a lesser-known brand, Australians will ask who handles warranty, where parts are stocked and how quickly a machine-down case will be resolved.",
+    actions:["Name local service partners.","Publish fast-moving parts and dispatch standards.","Write the labour, freight and warranty workflow."]
+  },
+  proof:{
+    title:"Insufficient real-use proof",
+    text:"Feature demonstrations are useful, but buyers need evidence of long work sessions, heat, dust, track retention, hydraulic performance and actual job outcomes.",
+    actions:["Run controlled Australian field tests.","Measure temperature, flow, cycle time and hours.","Use independent operators and transparent limitations."]
+  },
+  company:{
+    title:"Corporate and product clarity",
+    text:"A prospective partner should understand how TOVISEN, E-ZAN and Jining Yizhan relate, who owns the brand and which entity signs agreements and carries warranty liability.",
+    actions:["Provide a corporate relationship chart.","Document ownership and the meaning of the 20-year experience claim.","Identify the contracting and warranty entity."]
+  }
+};
+
+var riskPanelData={
+  visibility:{
+    why:["Australian buyers rely heavily on peer discussion before trusting a lesser-known machinery brand.","Factory-led content creates awareness, but it does not replace independent operator proof.","Low visibility weakens enquiries, dealer confidence and resale perception."],
+    evidence:["One official global account per platform","Australian operator videos and owner chronology","Dealer and customer case studies","Qualified enquiry and conversion tracking"],
+    question:"Can TOVISEN support an independent Australian operator channel showing honest positives, limitations, servicing and ownership experience?"
+  },
+  specs:{
+    why:["Conflicting public data makes transport, comparison and purchase decisions harder.","Capacity, weight, speed and hydraulic contradictions can undermine otherwise strong engineering.","Australian dealers need one controlled source of truth."],
+    evidence:["Signed Australian master specification","Defined ROC and tipping-load method","Frozen engine and component configuration","Revision-controlled brochure, website and marketplace data"],
+    question:"Can TOVISEN provide one signed, revision-controlled Australian specification sheet and correct every public listing to match it?"
+  },
+  identity:{
+    why:["The V1000 name is strongly associated with Derette and similar machines.","A buyer may dismiss the TOVISEN machine before researching its actual differences.","A distinctive name can improve search ownership, recall and premium positioning."],
+    evidence:["Australian name testing","Trademark and search review","Consistent product-family architecture","A positioning statement tied to verified capability"],
+    question:"Would TOVISEN consider an Australian-facing identity such as WorkPro 1000, VX1100 or 1100X to separate the machine from the generic V1000 category?"
+  },
+  support:{
+    why:["A capable machine with unclear support still feels risky.","Buyers need to know who carries warranty responsibility and how downtime will be handled.","Visible parts and service standards can become a competitive advantage."],
+    evidence:["Named Australian service partners","Fast-moving parts stock list","Written labour and freight policy","Machine-down response and dispatch targets"],
+    question:"Who will legally carry warranty responsibility in Australia, and what parts, labour and response standards will be committed before the first retail sale?"
+  },
+  proof:{
+    why:["Short feature clips rarely answer the questions that determine a purchase.","Australian users need proof on heat, dust, slopes, rough ground, tracks and long work sessions.","Measured tests create content, technical confidence and dealer training at the same time."],
+    evidence:["Witnessed track and slope endurance test","Hot hydraulic flow and pressure test","Full-day Australian heat and dust test","10-hour, 50-hour and six-month operator diary"],
+    question:"Will TOVISEN support a controlled Australian field trial with instrumented machines and independent operators?"
+  },
+  company:{
+    why:["A distributor must know which entity owns the brand, signs the agreement and carries liability.","Public references to TOVISEN, E-ZAN and Jining Yizhan can create uncertainty.","Corporate clarity supports trust, contracts, insurance and long-term parts responsibility."],
+    evidence:["Corporate relationship chart","Business licences and ownership timeline","Trademark and design ownership","Named contracting and warranty entity"],
+    question:"Can TOVISEN provide a clear legal and corporate map showing the relationship between TOVISEN, E-ZAN and Jining Yizhan?"
+  }
+};
+
+function openRiskPanel(key){
+  var data=riskData[key],detail=riskPanelData[key],why="",evidence="";
+  detail.why.forEach(function(x){why+="<li>"+escapeHtml(x)+"</li>";});
+  detail.evidence.forEach(function(x){evidence+="<li>"+escapeHtml(x)+"</li>";});
+  panelInner.innerHTML=
+    '<div class="risk-panel-hero"><small>Correctable market barrier</small><h2>'+escapeHtml(data.title)+'</h2><div>Australian market-entry analysis</div></div>'+
+    '<div class="panel-content">'+
+      '<p class="risk-panel-lead">'+escapeHtml(data.text)+'</p>'+
+      '<div class="risk-panel-grid">'+
+        '<div class="risk-panel-box"><h3>Why this matters</h3><ul>'+why+'</ul></div>'+
+        '<div class="risk-panel-box"><h3>Evidence required</h3><ul>'+evidence+'</ul></div>'+
+      '</div>'+
+      '<div class="risk-question"><b>Meeting question:</b><br>'+escapeHtml(detail.question)+'</div>'+
+      '<div class="data-warning"><b>Recommended action:</b> '+escapeHtml(data.actions.join(" "))+'</div>'+
+    '</div>';
+  panel.classList.add("open");
+  backdrop.classList.add("open");
+  document.body.classList.add("no-scroll");
+  panel.setAttribute("aria-hidden","false");
+}
+
+Array.prototype.forEach.call(document.querySelectorAll(".risk-card"),function(card){
+  card.setAttribute("tabindex","0");
+  card.setAttribute("role","button");
+  card.setAttribute("aria-label","Open analysis for "+card.querySelector("h3").textContent);
+  function activateRisk(){
+    var key=card.getAttribute("data-risk"),data=riskData[key];
+    Array.prototype.forEach.call(document.querySelectorAll(".risk-card"),function(x){x.classList.remove("active");});
+    card.classList.add("active");
+    document.getElementById("riskTitle").textContent=data.title;
+    document.getElementById("riskText").textContent=data.text;
+    document.getElementById("riskActions").innerHTML=data.actions.map(function(x){return "<li>"+escapeHtml(x)+"</li>";}).join("");
+    openRiskPanel(key);
+  }
+  card.addEventListener("click",activateRisk);
+  card.addEventListener("keydown",function(e){
+    if(e.key==="Enter"||e.key===" "){e.preventDefault();activateRisk();}
+  });
+});
+
+Array.prototype.forEach.call(document.querySelectorAll(".name-choice"),function(btn){
+  btn.addEventListener("click",function(){
+    Array.prototype.forEach.call(document.querySelectorAll(".name-choice"),function(x){x.classList.remove("active");});
+    btn.classList.add("active");
+    document.getElementById("namePreview").textContent=btn.getAttribute("data-name");
+    document.getElementById("nameTag").textContent=btn.getAttribute("data-tag");
+    document.getElementById("nameCopy").textContent=btn.getAttribute("data-copy");
+    var scores=btn.getAttribute("data-scores").split("|");
+    document.getElementById("nameScores").innerHTML=scores.map(function(x){return "<span>"+escapeHtml(x)+"</span>";}).join("");
+  });
+});
+
+try{renderCards();}catch(cardError){console.error("Machine cards failed:",cardError);}
+try{renderQuestion();}catch(questionError){
+  console.error("Selector failed:",questionError);
+  var qBox=document.getElementById("questionText");
+  var oBox=document.getElementById("options");
+  if(qBox){qBox.textContent="The selector could not initialise. Please reload this page in Chrome or Edge.";}
+  if(oBox){oBox.innerHTML='<button class="option" type="button" onclick="location.reload()">Reload selector</button>';}
+}
+
 })();
 </script>
 </body>
