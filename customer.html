@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d0f">
-<title>TOVISEN Australia - Machines, Attachments and Working Demonstrations v11</title>
+<title>TOVISEN Australia - Full Customer Experience with Mobile Navigation</title>
 <meta name="description" content="Explore TOVISEN compact loaders for acreage, landscaping, fencing, facilities, property maintenance and specialist Australian work.">
 <style>
 :root{
@@ -354,17 +354,81 @@ footer{background:#080a0c;color:#91999f;padding:27px 4vw;font-size:10px;line-hei
 }
 .local-mode-note.show{display:block}
 
+
+/* Mobile navigation shared across the TOVISEN pages */
+.menu-toggle{
+  display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.05);border-radius:7px;padding:0;
+  align-items:center;justify-content:center;flex-direction:column;gap:5px;color:#fff
+}
+.menu-toggle span{display:block;width:21px;height:2px;background:#fff;transition:.22s}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-only{display:none!important}
+@media(max-width:1050px){
+  .menu-toggle{display:flex;position:relative;z-index:103}
+  .topbar .nav,.site-header .nav{
+    display:flex!important;position:fixed;left:0;right:0;top:72px;z-index:102;
+    flex-direction:column;align-items:stretch;gap:0;padding:10px 4vw 22px;
+    background:rgba(8,10,12,.985);border-bottom:1px solid rgba(255,255,255,.12);
+    max-height:0;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-10px);
+    transition:max-height .28s ease,opacity .2s ease,transform .2s ease
+  }
+  .site-header .nav{top:74px}
+  .topbar .nav.open,.site-header .nav.open{
+    max-height:calc(100vh - 72px);overflow:auto;opacity:1;pointer-events:auto;transform:none
+  }
+  .topbar .nav a,.site-header .nav a{
+    width:100%;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.09);
+    font-size:12px;color:#fff
+  }
+  .mobile-only{display:block!important}
+  .mobile-nav-cta{
+    margin-top:11px!important;padding:14px 15px!important;border:0!important;
+    border-radius:5px;background:#d71920;color:#fff!important;text-align:center
+  }
+  .desktop-actions,.header-cta{display:none!important}
+  body.menu-open{overflow:hidden}
+}
+@media(max-width:690px){
+  .topbar .nav{top:62px;max-height:calc(100vh - 62px)}
+  .site-header .nav{top:63px;max-height:calc(100vh - 63px)}
+}
+
+.identity-section{background:linear-gradient(145deg,#111417,#23282d);color:#fff}
+.identity-grid{display:grid;grid-template-columns:.48fr .52fr;gap:25px;align-items:stretch}
+.identity-copy{padding:24px 0}
+.identity-copy p{color:#c1c7cb;font-size:17px;line-height:1.65}
+.identity-points{display:grid;gap:10px;margin-top:21px}
+.identity-point{border:1px solid #3b4248;border-radius:9px;padding:15px;background:#1a1e22}
+.identity-point b{display:block;color:#fff;margin-bottom:5px}
+.identity-point span{color:#aeb5ba;font-size:12px;line-height:1.5}
+.identity-card{
+  border-radius:16px;padding:29px;background:
+  radial-gradient(circle at 80% 15%,rgba(215,25,32,.35),transparent 31%),
+  linear-gradient(145deg,#d71920,#8f0b11);display:flex;flex-direction:column;justify-content:flex-end
+}
+.identity-card small{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.13em;color:#ffd6d8}
+.identity-card h3{font-size:42px;margin:11px 0 13px;line-height:1}
+.identity-card p{color:#ffe4e5;line-height:1.6}
+@media(max-width:850px){.identity-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="brand"><div class="brand-mark"></div>TOVISEN <span>AUSTRALIA</span></div>
-  <nav class="nav">
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav" id="mainNav">
     <a href="#finder">Find your machine</a>
     <a href="#flagship">V1000</a>
+    <a href="#identity">Model identity</a>
     <a href="#range">Range</a>
     <a href="#attachments">Attachments</a>
     <a href="#support">Why TOVISEN</a>
+    <a href="v1000-confusion.html">V1000 comparison</a>
+    <a class="mobile-only mobile-nav-cta" href="#build">Build my package</a>
   </nav>
   <button class="header-cta" data-scroll="#build">Build my package</button>
 </header>
@@ -461,6 +525,28 @@ footer{background:#080a0c;color:#91999f;padding:27px 4vw;font-size:10px;line-hei
         <button class="btn btn-dark" data-scroll="#build">Build a V1000 package</button>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section identity-section" id="identity">
+  <div class="container identity-grid">
+    <div class="identity-copy">
+      <div class="kicker">A distinctive Australian identity</div>
+      <h2>The machine should not disappear into a crowd of V1000s.</h2>
+      <p>Several compact-loader products use the V1000 name. TOVISEN's current comparison advertisement is also visually very close to a Derette V1000 advertisement, using the same competitors, colour structure and specification-table format. That can make a capable machine look generic or connected to another brand.</p>
+      <div class="identity-points">
+        <div class="identity-point"><b>A name TOVISEN can own</b><span>A distinctive Australian-facing model identity improves recall, search visibility and customer confidence.</span></div>
+        <div class="identity-point"><b>Original product presentation</b><span>Original photography and comparison creative should show why the TOVISEN machine is different rather than making it look interchangeable.</span></div>
+        <div class="identity-point"><b>One verified specification</b><span>The Australian identity should be tied to one controlled machine configuration and one consistent set of claims.</span></div>
+      </div>
+    </div>
+    <aside class="identity-card">
+      <small>Brand-transparency note</small>
+      <h3>Different machine.<br>Distinct identity.</h3>
+      <p>The Australian launch should make the product difference immediately visible, before a customer begins comparing specifications.</p>
+      <div class="actions"><a class="btn btn-light" href="v1000-confusion.html">See the V1000 comparison</a></div>
+    </aside>
   </div>
 </section>
 
@@ -1035,6 +1121,26 @@ document.getElementById("downloadBuild").addEventListener("click",function(){
 });
 
 Array.prototype.forEach.call(document.querySelectorAll("[data-scroll]"),function(btn){btn.addEventListener("click",function(){document.querySelector(btn.getAttribute("data-scroll")).scrollIntoView({behavior:"smooth"});});});
+
+
+var menuToggle=document.getElementById("menuToggle");
+var mainNav=document.getElementById("mainNav");
+function setMenu(open){
+  if(!menuToggle||!mainNav)return;
+  menuToggle.setAttribute("aria-expanded",open?"true":"false");
+  mainNav.classList.toggle("open",open);
+  document.body.classList.toggle("menu-open",open);
+}
+if(menuToggle&&mainNav){
+  menuToggle.addEventListener("click",function(){
+    setMenu(menuToggle.getAttribute("aria-expanded")!=="true");
+  });
+  Array.prototype.forEach.call(mainNav.querySelectorAll("a"),function(link){
+    link.addEventListener("click",function(){setMenu(false);});
+  });
+  window.addEventListener("resize",function(){if(window.innerWidth>1050)setMenu(false);});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")setMenu(false);});
+}
 
 renderMachines();
 renderAttachments();
